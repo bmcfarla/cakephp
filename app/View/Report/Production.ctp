@@ -6,12 +6,12 @@
     <div class=summary-block id=summary-barcodes>
         Barcodes<br>
         <hr>
-        <?php echo $barcodes['BARCODE_COUNT'] ?>
+        <?php echo $data['barcodeCount']['count'] ?>
     </div>
     <div class=summary-block id=summary-files>
         # Files<br>
         <hr>
-        <?php echo $barcodes['CLIP_COUNT'] ?>
+        <?php echo $data['barcodeCount']['clips'] ?>
     </div>
     <div class=summary-block id=summary-content>
         Total Content<br>
@@ -28,7 +28,7 @@
 <div class=section id=barcodes>
     <h1>Barcodes</h1>
 
-    <div id=summary-barcodes>
+    <div id=summary-barcodes-list>
         <table id="barcode-table">
             <tr>
                 <th>Item</th>
@@ -41,22 +41,18 @@
             </tr>
             <?php
                 $i = 0;
-                foreach($barcodes['BARCODES'] as $barcode => $details) : ?>
+                foreach($data['barcodeCount']['barcodes'] as $barcode => $value) : ?>
                 <tr>
                     <td><?php $i++; echo $i; ?></td>
                     <td><?php echo $barcode; ?></td>
-                    <td><?php echo $details['details']['desc']; ?></td>
-                    <td><?php echo $details['details']['type']; ?></td>
-                    <td><?php echo $details['details']['clips']; ?></td>
-                    <td><?php echo $details['details']['duration']; ?></td>
-                    <td><?php echo $details['details']['size']; ?></td>
+                    <td><?php echo $value['description']; ?></td>
+                    <td><?php echo $value['type']; ?></td>
+                    <td><?php echo $value['clips']; ?></td>
+                    <td><?php echo $value['duration']; ?></td>
+                    <td><?php echo $value['size']; ?></td>
                 </tr>
             <?php endforeach;?>
 
         </table>
     </div>
-</div>
-
-<div class=section id=barcode-detail>
-    BARCODE DETAILS
 </div>

@@ -21,7 +21,7 @@
 <body>
 	<div id="container">
 		<div id="header">
-		    <h1>Production Deletion Report for: <span id="header-prod-num"><?php echo "$prodNum - $prodTitle" ?></span></h1>
+		    <h1>Production Deletion Report for: <span id="header-prod-num"><?php echo "$prodNum - " . $data['prodTitle'] ?></span></h1>
 		</div>
 		<div id="content">
 

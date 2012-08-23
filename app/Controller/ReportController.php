@@ -27,9 +27,7 @@ class ReportController extends AppController {
 
         $data = $this->requestAction('/ipmam/getBarcodesByProduction/x65600');
 
-        $this->set('barcodes', $data['barcodes']);
-
-        $this->set('prodTitle', $data['productionTitle']);
+        $this->set('data', $data);
 
         $totSize = 0;
         $this->set('totSize', $totSize);

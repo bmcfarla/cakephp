@@ -60,7 +60,7 @@ return;
         $search = array(
             'OBJECTCLASSES' => 'VIDEO',
             'FIRSTHIT' => '0',
-            'MAXHITS' => '2',
+            'MAXHITS' => '9999999',
             'SIMPLESEARCH' => '',
             'ATTRIBUTESEARCH' => array(
                 'ATTRIBUTE' => 'PRODUCTION_NUMBER',
@@ -74,6 +74,7 @@ return;
                     array(
                         'BARCODE',
                         'CLIP_ID',
+                        'PRODUCTION_NUMBER',
                         'PRODUCTION_TITLE',
                         'ASSET_TAPE_FORMAT',
                         'CONTENT_TYPE',
@@ -103,7 +104,11 @@ return;
 
         $data = $this->getDmguidsByProduction($production);
 
-        print_r($data);
+        $data['prodTitle'] = $this->Ipmam->getProductionTitle($data);
+        $this->Ipmam->barcodeCount($data);
+
+        //print_r($data);
+        return $data;
         exit;
         foreach ($data['guids'] as $dmguid) {
             preg_match('/V_(.*)_I(\d+)/',$dmguid, &$matches);

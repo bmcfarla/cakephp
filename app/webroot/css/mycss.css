@@ -19,15 +19,35 @@
 }
 
 #content {
-	padding: 0px;
+	padding: 10px;
 	box-shadow: 0px 0px 32px black;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 10px;
 }
 
 .section {
+	padding: 0px;
+	margin: 0px;
+}
+
+.section h1 {
+	background: lightgray;
+	line-height: 2em;
 	border-style: solid;
 	border-width: 1px;
-	padding: 5px;
-	margin: 5px;
+	border-color: gray;
+	border-radius: 5px;
+	padding-left: 5px;
+	font-weight: bold;
+	font-size: large;
+}
+
+#summary-barcodes-list {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	background: lightgray;
 }
 
 .summary-block {
@@ -57,3 +77,21 @@
 	border-style: solid;
 	border-width: 1px;
 }
+
+.section barcodes {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	background: lightgray;
+}
+
+#summary-size #summary-content {
+	float: right;
+	margin-right: 0px;
+}
+
+table tr td {
+	padding: 0px 2px;
+	font-size: smaller;
+}
+

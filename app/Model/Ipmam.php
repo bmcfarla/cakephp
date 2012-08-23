@@ -176,7 +176,7 @@ class Ipmam extends AppModel
     /**
      * Returns an array of dmguids
      */
-    function getProductionTitle($searchResponseXml) {
+    function getProductionTitlex($searchResponseXml) {
         $productionTitles = array();
         $titles = array();
 
@@ -272,6 +272,8 @@ class Ipmam extends AppModel
     }
 
     function parseXml($xmlIn) {
+        $prodTitle = '';
+
         //print $xmlIn;
         //$xml = new SimpleXMLElement($xmlIn);
         $xml = new SimpleXmlIterator($xmlIn);
@@ -315,6 +317,31 @@ class Ipmam extends AppModel
         return $a;
     }
 
+    function getProductionTitle($data) {
+        $keys = array_keys($data['DMGUIDS']);
+
+        return $data['DMGUIDS'][$keys[0]]['PRODUCTION_TITLE'];
+    }
+
+    function barcodeCount(&$data) {
+        foreach($data['DMGUIDS'] as $dmguid) {
+
+            if (!isset($bcc{$dmguid['BARCODE']})) {
+                $bcc{$dmguid['BARCODE']}['clips'] = 0;
+            }
+
+            //$bcc{$dmguid['BARCODE']}['count']++;
+            $bcc{$dmguid['BARCODE']}['description'] = 'description';
+            $bcc{$dmguid['BARCODE']}['type'] = $dmguid['ASSET_TAPE_FORMAT'];
+            $bcc{$dmguid['BARCODE']}['clips']++;
+            $bcc{$dmguid['BARCODE']}['duration'] = 'trt';
+            $bcc{$dmguid['BARCODE']}['size'] = 'size';
+        }
+
+        $data['barcodeCount']['barcodes'] = $bcc;
+        $data['barcodeCount']['count'] = count($data['barcodeCount']['barcodes']);
+        $data['barcodeCount']['clips'] = count($data['DMGUIDS']);
+    }
 }
 
 
