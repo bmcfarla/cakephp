@@ -60,7 +60,7 @@ return;
         $search = array(
             'OBJECTCLASSES' => 'VIDEO',
             'FIRSTHIT' => '0',
-            'MAXHITS' => '9999999',
+            'MAXHITS' => '1',
             'SIMPLESEARCH' => '',
             'ATTRIBUTESEARCH' => array(
                 'ATTRIBUTE' => 'PRODUCTION_NUMBER',

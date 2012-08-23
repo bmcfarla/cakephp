@@ -16,6 +16,7 @@ class Ipmam extends AppModel
         $this->_ipmam->client('dmSearch', 'DataManagerWS\DMSearch');
         $this->_ipmam->client('dmEssencesPackages', 'DataManagerWS\DMEssencePackages');
         $this->_ipmam->client('essenceManager', 'EssenceManagerWS\EssenceManager');
+        $this->_ipmam->client('dmObjectAccess', 'DataManagerWS\DMObjectAccess');
 
     }
 
@@ -324,14 +325,14 @@ class Ipmam extends AppModel
     }
 
     function barcodeCount(&$data) {
-        foreach($data['DMGUIDS'] as $dmguid) {
+        foreach($data['DMGUIDS'] as $key=>$dmguid) {
 
             if (!isset($bcc{$dmguid['BARCODE']})) {
                 $bcc{$dmguid['BARCODE']}['clips'] = 0;
             }
 
             //$bcc{$dmguid['BARCODE']}['count']++;
-            $bcc{$dmguid['BARCODE']}['description'] = 'description';
+            $bcc{$dmguid['BARCODE']}['description'] = $this->getClipTapeDescrption($key);
             $bcc{$dmguid['BARCODE']}['type'] = $dmguid['ASSET_TAPE_FORMAT'];
             $bcc{$dmguid['BARCODE']}['clips']++;
             $bcc{$dmguid['BARCODE']}['duration'] = 'trt';
@@ -341,6 +342,29 @@ class Ipmam extends AppModel
         $data['barcodeCount']['barcodes'] = $bcc;
         $data['barcodeCount']['count'] = count($data['barcodeCount']['barcodes']);
         $data['barcodeCount']['clips'] = count($data['DMGUIDS']);
+    }
+
+    function getClipTapeDescrption($dmguid) {
+        if (preg_match('/^V_(.+)_.+$/',$dmguid,$matches)) {
+            $vsObj = "VS_" . $matches[1];
+        } elseif (preg_match('/^V?/',$dmguid)) {
+            $vsObj = "VS_" . $dmguig;
+        } else {
+            $vsObj = $dmguig;
+        }
+
+        $inputObject = $this->_ipmam->f(
+            'GetDMAttribute',
+            array (
+                $vsObj,
+                'CLIP_TAPE_DESCRIPTION',
+                $this->_ipmam->vars['accessKey'],
+            )
+        );
+
+        $response = $this->_ipmam->client('dmObjectAccess')->GetDMAttribute($inputObject);
+
+        return $response->GetDMAttributeResult;
     }
 }
 
