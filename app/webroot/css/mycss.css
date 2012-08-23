@@ -1,0 +1,59 @@
+@CHARSET "ISO-8859-1";
+
+#header h1 {
+	background: #003D4C url('../img/goldRectangle.png') no-repeat left;
+	background-size: 25px;
+	font-size: larger;
+	font-weight: bold;
+	text-shadow: 0px 0px 10px black;
+	line-height: 32px;
+}
+
+#header-prod-num {
+	text-decoration: underline;
+}
+
+#container {
+	width: 960px;
+	margin: auto;
+}
+
+#content {
+	padding: 0px;
+	box-shadow: 0px 0px 32px black;
+}
+
+.section {
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	margin: 5px;
+}
+
+.summary-block {
+	float: left;
+	border-width: 1px;
+	border-style: solid;
+	border-color: gray;
+	background-color: lightgray;
+	margin: 5px;
+	width: 23.7%;
+	height: 60px;
+	text-align: center;
+	font-size: large;
+	border-radius: 5px;
+}
+
+#summary:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.summary-block hr {
+	margin: 5px;
+	border-style: solid;
+	border-width: 1px;
+}

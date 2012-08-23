@@ -57,6 +57,10 @@ class ProductionController extends AppController {
         $this->redirect(array('action' => 'index'));
     }
 
+    function report($production) {
+
+    }
+
 }
 
 ?>

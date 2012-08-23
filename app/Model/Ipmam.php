@@ -56,12 +56,26 @@ class Ipmam extends AppModel
      * return ipmam query string
      */
     function getQueryDoc($search) {
+        $axfArray = array();
         $axfArray[] = "<AXFRoot>";
 
         $dmQuery = $this->_getDmquery();
 
         foreach ($search as $key=>$val) {
-            $dmQuery = preg_replace("/>$key</",">$val<",$dmQuery);
+            //echo "KEY: $key<br>";
+            if ($key == 'ATTRIBUTESEARCH') {
+                //echo "KEY: $key<br>";
+
+                $attributeSearch = $this->_getAttributeSearch();
+
+                foreach ($val as $key=>$value) {
+                    //echo "KEY: $key<br>";
+                    $attributeSearch = preg_replace("/>$key</",">$value<",$attributeSearch);
+                }
+                $dmQuery .= $attributeSearch;
+            } else {
+                $dmQuery = preg_replace("/>$key</",">$val<",$dmQuery);
+            }
         }
 
         $axfArray[] = $dmQuery;
@@ -81,19 +95,57 @@ class Ipmam extends AppModel
     </MAObject>";
     }
 
+    function _getAttributeSearch() {
+        return "    <MAObject type='default' mdclass='AttributeSearch'>
+        <GUID />
+        <Ref mdclass='DMQuery' name='QUERY'>theID</Ref>
+        <Meta name='ATTRIBUTE' format='string'>ATTRIBUTE</Meta>
+        <Meta name='SEARCHSTRING' format='string'>SEARCHSTRING</Meta>
+        <Meta name='GROUP' format='string'>1</Meta>
+    </MAObject>";
+    }
+
+
+    function getHitListDoc($fields) {
+        $axfArray = array();
+        $axfArray[] = "<AXFRoot>";
+
+        $guidId = 0;
+
+        foreach ($fields as $field) {
+            $hitlistDoc[] = "    <MAObject type='default' mdclass='ModelHitlistAttribute'>
+        <GUID dmname=''>$guidId</GUID>
+        <Ref mdclass='ModelHitlist' name='HITLIST'>theHitlist</Ref>
+        <Meta name='NAME' format='string' frate=''>$field</Meta>
+    </MAObject>";
+            $guidId++;
+        }
+
+        $hitlistDoc[] = "    <MAObject type='default' mdclass='ModelHitlist'>
+        <GUID dmname=''>theHitlist</GUID>
+        <Meta name='MODIFYABLE' format='string' frate=''>1</Meta>
+        <Meta name='USAGE' format='string' frate=''>RETRIEVAL</Meta>
+        <Meta name='NAME' format='string' frate=''>theHitlist</Meta>
+    </MAObject>";
+        $axfArray[] = implode("\n",$hitlistDoc);
+        $axfArray[] = "</AXFRoot>";
+
+        return implode("\n",$axfArray);
+    }
+
 /************************************************************************/
 
     /**
      *
      */
-    function search($queryDoc) {
+    function search($queryDoc, $hitlist) {
 
         $searchExt2 = $this->_ipmam->f(
             'SearchExt2',
             array (
                 $this->_ipmam->vars['accessKey'],
                 $queryDoc,
-                NULL,
+                $hitlist,
                 'en'
             )
         );
@@ -119,6 +171,26 @@ class Ipmam extends AppModel
         }
         natcasesort($guids);
         return $guids;
+    }
+
+    /**
+     * Returns an array of dmguids
+     */
+    function getProductionTitle($searchResponseXml) {
+        $productionTitles = array();
+        $titles = array();
+
+        $xml = new SimpleXMLElement($searchResponseXml);
+
+        $productionTitles = $xml->xpath('/AXFRoot/MAObject[@mdclass="VIDEO"]/Meta[@name="PRODUCTION_TITLE"]');
+
+        if ($productionTitles) {
+            foreach ($productionTitles as $node) {
+                $titles[] = sprintf('%s',$node);
+            }
+        }
+
+        return $titles[0];
     }
 
     /**
@@ -199,6 +271,49 @@ class Ipmam extends AppModel
         return $esssenses;
     }
 
+    function parseXml($xmlIn) {
+        //print $xmlIn;
+        //$xml = new SimpleXMLElement($xmlIn);
+        $xml = new SimpleXmlIterator($xmlIn);
+
+        $data = $xml->xpath('/AXFRoot/MAObject[@mdclass="VIDEO"]');
+
+        $guidDetails = array();
+
+        foreach ($data as $sxi) {
+            $guid = strval($sxi->{'GUID'});
+
+            for( $sxi->rewind(); $sxi->valid(); $sxi->next() ) {
+                //print_r($sxi->current());
+                $a = $sxi->current();
+
+                if (isset($a['name'])) {
+                    $b = $a['name'];
+
+                    $guidDetails[strval($a['name'])] = strval($sxi->current());
+                }
+            }
+            $guids[$guid] = $guidDetails;
+        }
+
+        return $guids;
+    }
+
+    function sxiToArray($sxi){
+        $a = array();
+        for( $sxi->rewind(); $sxi->valid(); $sxi->next() ) {
+            if(!array_key_exists($sxi->key(), $a)){
+                $a[$sxi->key()] = array();
+            }
+            if($sxi->hasChildren()){
+                $a[$sxi->key()][] = sxiToArray($sxi->current());
+            }
+            else{
+                $a[$sxi->key()][] = strval($sxi->current());
+            }
+        }
+        return $a;
+    }
 
 }
 
