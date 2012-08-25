@@ -175,26 +175,6 @@ class Ipmam extends AppModel
     }
 
     /**
-     * Returns an array of dmguids
-     */
-    function getProductionTitlex($searchResponseXml) {
-        $productionTitles = array();
-        $titles = array();
-
-        $xml = new SimpleXMLElement($searchResponseXml);
-
-        $productionTitles = $xml->xpath('/AXFRoot/MAObject[@mdclass="VIDEO"]/Meta[@name="PRODUCTION_TITLE"]');
-
-        if ($productionTitles) {
-            foreach ($productionTitles as $node) {
-                $titles[] = sprintf('%s',$node);
-            }
-        }
-
-        return $titles[0];
-    }
-
-    /**
      *
      */
     function getEpGuid($dmguid, $type) {
@@ -262,7 +242,7 @@ class Ipmam extends AppModel
 
         //print_r($inputObject);
         $em = $this->_ipmam->client('essenceManager')->GetEMObject2InfosInEP($inputObject);
-
+//print_r($em);
         $esssenses = $em->GetEMObject2InfosInEPResult->EMObject2;
 
         if (!is_array($esssenses)){
@@ -270,6 +250,48 @@ class Ipmam extends AppModel
         }
 
         return $esssenses;
+    }
+
+    /**
+     *
+     */
+    function getAllEssencesWithLocation($epguid) {
+        $essences = $this->getAllEssences($epguid);
+
+        ///$emguidlist = $this->_ipmam->f(
+        //        'emguidlist',
+        //        $essences
+       // );
+/*
+        $a = $this->_ipmam->f(
+            'ArrayOfString',
+            array (
+                '77e171ed-775f-415c-9071-24bcfe340497',
+                '0fd9475e-9f37-4c50-85d0-0b5952853add'
+           )
+        );
+*/
+
+        //print_r($a);
+        //exit;
+        $inputObject = $this->_ipmam->f(
+            'GetAccessPathForEMGuids',
+            array (
+                $this->_ipmam->vars['accessKey'],
+                 array (
+                    'a0e71449-3ac2-49d8-adf9-cc80f1975c08',
+                    '77e171ed-775f-415c-9071-24bcfe340497',
+                    '0fd9475e-9f37-4c50-85d0-0b5952853add'
+                   ),
+                'UNC'
+            )
+        );
+
+        $reponse = $this->_ipmam->client('essenceManager')->GetAccessPathForEMGuidsEx($inputObject);
+
+        print_r($reponse);
+        exit;
+        //return $reponse;
     }
 
     function parseXml($xmlIn) {
@@ -325,18 +347,26 @@ class Ipmam extends AppModel
     }
 
     function barcodeCount(&$data) {
+        $data['barcodeCount']['content'] = '00:00:00:00';
+
         foreach($data['DMGUIDS'] as $key=>$dmguid) {
+
 
             if (!isset($bcc{$dmguid['BARCODE']})) {
                 $bcc{$dmguid['BARCODE']}['clips'] = 0;
+                $bcc{$dmguid['BARCODE']}['duration'] = '00:00:00:00';
             }
 
             //$bcc{$dmguid['BARCODE']}['count']++;
             $bcc{$dmguid['BARCODE']}['description'] = $this->getClipTapeDescrption($key);
             $bcc{$dmguid['BARCODE']}['type'] = $dmguid['ASSET_TAPE_FORMAT'];
             $bcc{$dmguid['BARCODE']}['clips']++;
-            $bcc{$dmguid['BARCODE']}['duration'] = 'trt';
+
+            $duration = $bcc{$dmguid['BARCODE']}['duration'];
+
+            $bcc{$dmguid['BARCODE']}['duration'] = $this->sumTrt($duration, $dmguid['TAPE_RUNNING_TIME']);
             $bcc{$dmguid['BARCODE']}['size'] = 'size';
+            $data['barcodeCount']['content'] = $this->sumTrt($data['barcodeCount']['content'], $dmguid['TAPE_RUNNING_TIME']);
         }
 
         $data['barcodeCount']['barcodes'] = $bcc;
@@ -365,6 +395,69 @@ class Ipmam extends AppModel
         $response = $this->_ipmam->client('dmObjectAccess')->GetDMAttribute($inputObject);
 
         return $response->GetDMAttributeResult;
+    }
+
+    function sumTrt(&$trt, $tapeRunningTime) {
+        $sumSec = $this->tcToSec($trt);
+        $bcSec = $this->tcToSec($tapeRunningTime);
+        $trt = $this->secToTc($sumSec + $bcSec);
+
+        return $trt;
+    }
+
+    function secToTc($secs, $framerate = 29.97) {
+
+        $parSecs = fmod($secs, 1);
+
+
+        $hourMinSecs = $secs - $parSecs;
+
+        $frames = floor($parSecs * $framerate);
+
+        $hours = floor($hourMinSecs / 3600);
+        $minSecs = $hourMinSecs - ($hours * 3660);
+
+        $mins =  floor($minSecs / 60);
+        $secs = $minSecs - ($mins * 60);
+
+        $tc = sprintf("%02s:%02s:%02s:%02s",$hours,$mins,$secs,$frames);
+
+        return $tc;
+    }
+
+    function tcToSec($input, $framerate = 29.97) {
+
+        $input = trim($input);
+
+        $punct= array(":", ";", ".", ",");
+        $input = str_replace( $punct, ":", $input);
+
+        $vals = explode(':', $input);
+
+        $tc = array(
+                'HOURS'=>0,
+                'MINS'=>0,
+                'SECS'=>0,
+                'FRAMES'=>0
+            );
+
+        foreach ($tc as $key=>$val) {
+            $tc[$key] = array_shift($vals);
+        }
+
+        $secs = ($tc['HOURS']*3600) + ($tc['MINS']*60) + $tc['SECS'] + ($tc['FRAMES'] / $framerate);
+
+        return $secs;
+    }
+
+    function getFileDetails($barcode) {
+        echo $barcode;
+        $epGuids = $this->getAllEpGuids($barcode);
+
+        foreach ($epGuids as $epGuid) {
+            $ep{$epGuid} = $this->getAllEssencesWithLocation($epGuid);
+        }
+        return $ep;
     }
 }
 

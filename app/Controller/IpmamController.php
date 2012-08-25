@@ -60,7 +60,7 @@ return;
         $search = array(
             'OBJECTCLASSES' => 'VIDEO',
             'FIRSTHIT' => '0',
-            'MAXHITS' => '1',
+            'MAXHITS' => '99999',
             'SIMPLESEARCH' => '',
             'ATTRIBUTESEARCH' => array(
                 'ATTRIBUTE' => 'PRODUCTION_NUMBER',
@@ -98,7 +98,7 @@ return;
 
     function getBarcodesByProduction($production) {
 
-        set_time_limit(60);
+        set_time_limit(120);
 
         $this->Ipmam->login();
 
@@ -109,36 +109,14 @@ return;
 
         //print_r($data);
         return $data;
-        exit;
-        foreach ($data['guids'] as $dmguid) {
-            preg_match('/V_(.*)_I(\d+)/',$dmguid, &$matches);
-            //print_r($matches);
 
-            $dm[$matches[0]] = 1;
+    }
 
-            if (!isset($bc[$matches[1]])) {
-                $bc[$matches[1]]['details']['clips'] = 0;
-                $bc[$matches[1]]['details']['desc'] = 'not set';
-                $bc[$matches[1]]['details']['type'] = 'not set';
-                $bc[$matches[1]]['details']['duration'] = 'not set';
-                $bc[$matches[1]]['details']['size'] = 'not set';
-            }
+    function getFiles($barcode) {
+        $this->Ipmam->login();
+        $data = $this->Ipmam->getFileDetails($barcode);
 
-            $bc[$matches[1]]['details']['clips']++;
-
-            $clips[] = "$matches[1]_$matches[2]";
-
-        }
-
-        $data['barcodes']['DMGUIDS'] = array_keys($dm);
-        $data['barcodes']['BARCODES'] = $bc;
-        $data['barcodes']['CLIPS'] = $clips;
-        $data['barcodes']['BARCODE_COUNT'] = count($data['barcodes']['BARCODES']);
-        $data['barcodes']['CLIP_COUNT'] = count($data['barcodes']['CLIPS']);
-
-        //print_r($barcodes['BARCODES']);
-
-        return $data;
+        $this->set('data', $data);
     }
 
 }

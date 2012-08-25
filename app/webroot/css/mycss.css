@@ -90,8 +90,50 @@
 	margin-right: 0px;
 }
 
+table {
+	table-layout:fixed
+	overflow: hidden;
+}
+
 table tr td {
 	padding: 0px 2px;
 	font-size: smaller;
 }
 
+th {
+	font-size: 0.7em;
+}
+
+.col1 {
+	width: 30px;
+	text-align: center;
+}
+
+.col2 {
+	width: 135px;
+}
+
+.col3 {
+	width: auto;
+	font-size: 0.7em;
+	padding: 5px;
+	line-height: 1.5em;
+}
+
+.col4 {
+	width: 80px;
+	text-align: center;
+}
+
+.col5 {
+		width: 30px;
+	text-align: center;
+}
+
+.col6 {
+	width: 80px;
+}
+
+.col7 {
+	width: 45px;
+}

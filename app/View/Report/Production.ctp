@@ -16,7 +16,7 @@
     <div class=summary-block id=summary-content>
         Total Content<br>
         <hr>
-        <?php echo $totContent ?>
+        <?php echo $data['barcodeCount']['content'] ?>
     </div>
     <div class=summary-block id=summary-size>
         Total Size<br>
@@ -31,25 +31,25 @@
     <div id=summary-barcodes-list>
         <table id="barcode-table">
             <tr>
-                <th>Item</th>
-                <th>Barcode</th>
-                <th>Description</th>
-                <th>Type</th>
-                <th>Clips</th>
-                <th>Duration</th>
-                <th>Size</th>
+                <th class="col1" >Item</th>
+                <th class="col2" >Barcode</th>
+                <th class="col3" >Description</th>
+                <th class="col4" >Type</th>
+                <th class="col5" >Clips</th>
+                <th class="col6" >Duration</th>
+                <th class="col7" >Size</th>
             </tr>
             <?php
                 $i = 0;
                 foreach($data['barcodeCount']['barcodes'] as $barcode => $value) : ?>
                 <tr>
-                    <td><?php $i++; echo $i; ?></td>
-                    <td><?php echo $barcode; ?></td>
-                    <td><?php echo $value['description']; ?></td>
-                    <td><?php echo $value['type']; ?></td>
-                    <td><?php echo $value['clips']; ?></td>
-                    <td><?php echo $value['duration']; ?></td>
-                    <td><?php echo $value['size']; ?></td>
+                    <td class="col1" ><?php $i++; echo $i; ?></td>
+                    <td class="col2" ><?php echo $barcode; ?></td>
+                    <td class="col3" ><?php echo $value['description']; ?></td>
+                    <td class="col4" ><?php echo $value['type']; ?></td>
+                    <td class="col5" ><?php echo $value['clips']; ?></td>
+                    <td class="col6" ><?php echo $value['duration']; ?></td>
+                    <td class="col7" ><?php echo $value['size']; ?></td>
                 </tr>
             <?php endforeach;?>
 

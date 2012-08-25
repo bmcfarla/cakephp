@@ -4,7 +4,7 @@
  *
  */
 class generateSoapClient {
-    
+
     /***********************************************************************//**
      * @brief Connect to the web service
      *
@@ -17,7 +17,7 @@ class generateSoapClient {
      * @return Client handle the $wsdlUri webservice
      */
     public function createSoapClient($wsdlUri,$options="none") {
-        
+
         // connect to web service to get types
         $client = new SoapClient($wsdlUri);
 
@@ -99,7 +99,7 @@ class generateSoapClient {
                                 break;
                         }
                     }
-                    
+
                     // Build class string
                     $func = $className.'
                     {
@@ -111,6 +111,7 @@ class generateSoapClient {
 
                     // Check the class does not exsits before creating it
                     if (!class_exists($className)) {
+                        //print_r($func);
                         eval("class $func");
                     }
 
@@ -120,7 +121,7 @@ class generateSoapClient {
                     break;
             }
         }
-        
+
         // Return a client handle for the web service with the generated classmap
         return new SoapClient($wsdlUri, array ('classmap' => $types));
     }
