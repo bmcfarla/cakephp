@@ -1,9 +1,16 @@
 <?php
-
+/**
+ *
+ * @author bmcfarla
+ *
+ */
 class ProductionController extends AppController {
     var $scaffold;
     var $tmpFile;
 
+    /**
+     *
+     */
     function uploadExcel() {
         if ($this->request->is('post')) {
             $this->Session->setFlash('Your file has been uploaded.');
@@ -12,6 +19,9 @@ class ProductionController extends AppController {
         }
     }
 
+    /**
+     *
+     */
     function processExcel() {
         set_time_limit(240);    //4minutes
         ini_set('memory_limit', '64M');
@@ -57,6 +67,9 @@ class ProductionController extends AppController {
         $this->redirect(array('action' => 'index'));
     }
 
+    /**
+     *
+     */
     function report($production) {
 
     }

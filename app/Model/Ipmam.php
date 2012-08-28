@@ -1,5 +1,9 @@
 <?php
-
+/**
+ *
+ * @author bmcfarla
+ *
+ */
 class Ipmam extends AppModel
 {
     /**
@@ -85,6 +89,10 @@ class Ipmam extends AppModel
         return implode("\n",$axfArray);
     }
 
+    /**
+     *
+     * @return string
+     */
     function _getDmquery() {
         return "    <MAObject type='default' mdclass='DMQuery'>
         <GUID>theID</GUID>
@@ -96,6 +104,10 @@ class Ipmam extends AppModel
     </MAObject>";
     }
 
+    /**
+     *
+     * @return string
+     */
     function _getAttributeSearch() {
         return "    <MAObject type='default' mdclass='AttributeSearch'>
         <GUID />
@@ -106,7 +118,11 @@ class Ipmam extends AppModel
     </MAObject>";
     }
 
-
+    /**
+     *
+     * @param unknown_type $fields
+     * @return string
+     */
     function getHitListDoc($fields) {
         $axfArray = array();
         $axfArray[] = "<AXFRoot>";
@@ -274,26 +290,35 @@ class Ipmam extends AppModel
 
         //print_r($a);
         //exit;
+
+        foreach ($essences as $essence) {
+            $emguids[] = $essence->emguid;
+        };
+
+
         $inputObject = $this->_ipmam->f(
             'GetAccessPathForEMGuids',
             array (
                 $this->_ipmam->vars['accessKey'],
-                 array (
-                    'a0e71449-3ac2-49d8-adf9-cc80f1975c08',
-                    '77e171ed-775f-415c-9071-24bcfe340497',
-                    '0fd9475e-9f37-4c50-85d0-0b5952853add'
-                   ),
+                 $emguids,
                 'UNC'
             )
         );
 
-        $reponse = $this->_ipmam->client('essenceManager')->GetAccessPathForEMGuidsEx($inputObject);
+        $reponse = $this->_ipmam->client('essenceManager')->GetAccessPathForEMGuids($inputObject);
+        $pathes = $reponse->GetAccessPathForEMGuidsResult->string;
+        print_r($pathes);
 
-        print_r($reponse);
+
         exit;
         //return $reponse;
     }
 
+    /**
+     *
+     * @param unknown_type $xmlIn
+     * @return multitype:string
+     */
     function parseXml($xmlIn) {
         $prodTitle = '';
 
@@ -324,6 +349,11 @@ class Ipmam extends AppModel
         return $guids;
     }
 
+    /**
+     *
+     * @param unknown_type $sxi
+     * @return Ambigous <multitype:multitype: , string>
+     */
     function sxiToArray($sxi){
         $a = array();
         for( $sxi->rewind(); $sxi->valid(); $sxi->next() ) {
@@ -340,12 +370,20 @@ class Ipmam extends AppModel
         return $a;
     }
 
+    /**
+     *
+     * @param unknown_type $data
+     */
     function getProductionTitle($data) {
         $keys = array_keys($data['DMGUIDS']);
 
         return $data['DMGUIDS'][$keys[0]]['PRODUCTION_TITLE'];
     }
 
+    /**
+     *
+     * @param unknown_type $data
+     */
     function barcodeCount(&$data) {
         $data['barcodeCount']['content'] = '00:00:00:00';
 
@@ -374,6 +412,10 @@ class Ipmam extends AppModel
         $data['barcodeCount']['clips'] = count($data['DMGUIDS']);
     }
 
+    /**
+     *
+     * @param unknown_type $dmguid
+     */
     function getClipTapeDescrption($dmguid) {
         if (preg_match('/^V_(.+)_.+$/',$dmguid,$matches)) {
             $vsObj = "VS_" . $matches[1];
@@ -397,6 +439,12 @@ class Ipmam extends AppModel
         return $response->GetDMAttributeResult;
     }
 
+    /**
+     *
+     * @param unknown_type $trt
+     * @param unknown_type $tapeRunningTime
+     * @return unknown
+     */
     function sumTrt(&$trt, $tapeRunningTime) {
         $sumSec = $this->tcToSec($trt);
         $bcSec = $this->tcToSec($tapeRunningTime);
@@ -405,6 +453,12 @@ class Ipmam extends AppModel
         return $trt;
     }
 
+    /**
+     *
+     * @param unknown_type $secs
+     * @param unknown_type $framerate
+     * @return string
+     */
     function secToTc($secs, $framerate = 29.97) {
 
         $parSecs = fmod($secs, 1);
@@ -425,6 +479,12 @@ class Ipmam extends AppModel
         return $tc;
     }
 
+    /**
+     *
+     * @param unknown_type $input
+     * @param unknown_type $framerate
+     * @return number
+     */
     function tcToSec($input, $framerate = 29.97) {
 
         $input = trim($input);
@@ -450,6 +510,11 @@ class Ipmam extends AppModel
         return $secs;
     }
 
+    /**
+     *
+     * @param unknown_type $barcode
+     * @return unknown
+     */
     function getFileDetails($barcode) {
         echo $barcode;
         $epGuids = $this->getAllEpGuids($barcode);

@@ -1,7 +1,13 @@
 <?php
-
+/**
+ *
+ * @author bmcfarla
+ *
+ */
 class IpmamController extends AppController {
-
+    /**
+     *
+     */
     function Index() {
 
         $vsObjects = array();
@@ -55,19 +61,18 @@ return;
      *
      *
      */
-    function getDmguidsByProduction($production) {
-
+    function getDmguidsByProduction($prodNum, $maxHits) {
         $search = array(
             'OBJECTCLASSES' => 'VIDEO',
             'FIRSTHIT' => '0',
-            'MAXHITS' => '99999',
+            'MAXHITS' => $maxHits,
             'SIMPLESEARCH' => '',
             'ATTRIBUTESEARCH' => array(
                 'ATTRIBUTE' => 'PRODUCTION_NUMBER',
-                'SEARCHSTRING' => $production
+                'SEARCHSTRING' => $prodNum
             )
         );
-
+//echo "MAX_Hits: " . $params['maxhits'] ."<br>";
         $queryDoc = $this->Ipmam->getQueryDoc($search);
 
         $hitlist = $this->Ipmam->getHitListDoc(
@@ -96,13 +101,20 @@ return;
         return $data;
     }
 
-    function getBarcodesByProduction($production) {
+
+    /**
+     *
+     * @return unknown
+     */
+    function getProductionData() {
+        $prodNum = $this->params['named']['prod'];
+        $maxHits = $this->params['named']['maxhits'];
 
         set_time_limit(120);
 
         $this->Ipmam->login();
 
-        $data = $this->getDmguidsByProduction($production);
+        $data = $this->getDmguidsByProduction($prodNum, $maxHits);
 
         $data['prodTitle'] = $this->Ipmam->getProductionTitle($data);
         $this->Ipmam->barcodeCount($data);
@@ -112,13 +124,14 @@ return;
 
     }
 
+    /**
+     *
+     * @param unknown_type $barcode
+     */
     function getFiles($barcode) {
         $this->Ipmam->login();
         $data = $this->Ipmam->getFileDetails($barcode);
 
         $this->set('data', $data);
     }
-
 }
-
-
