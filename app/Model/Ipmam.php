@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @author bmcfarla
+ * Ipmam Model
  *
  */
 class Ipmam extends AppModel
@@ -10,9 +10,13 @@ class Ipmam extends AppModel
      * Constructor
      */
     function __construct(){
+        // call parent construct
         parent::__construct();
 
+        // Load ipmam soap interface lib
         App::import('Vendor', 'Ipmam SOAP interface', array('file' => 'ipmam/IpmamSoapInterface.php'));
+
+        // Initialize the ipmam interface
         $this->_ipmam = initIpmamInterface();
 
         // Create clients
@@ -22,6 +26,8 @@ class Ipmam extends AppModel
         $this->_ipmam->client('essenceManager', 'EssenceManagerWS\EssenceManager');
         $this->_ipmam->client('dmObjectAccess', 'DataManagerWS\DMObjectAccess');
 
+        // login to Ipmam; no args logs in as admin
+        $this->login();
     }
 
     /**
@@ -29,7 +35,8 @@ class Ipmam extends AppModel
      */
     function __destruct()
     {
-       $this->logout();
+        // Logout when ipmam object is destroyed
+        $this->logout();
     }
 
     /**
@@ -37,12 +44,12 @@ class Ipmam extends AppModel
      */
     function login($user = 'admin', $pass = 'nimda') {
 
-        // Get accesskey object
-        $login = $this->_ipmam->f('Login', array($user, $pass));
+        // Get a login input object
+        $inputObj = $this->_ipmam->f('Login', array($user, $pass));
 
-        $this->_ipmam->vars['accessKey'] = $this->_ipmam->client('um')->Login($login)->LoginResult;
+        // Get accessKey
+        $this->_ipmam->vars['accessKey'] = $this->_ipmam->client('um')->Login($inputObj)->LoginResult;
 
-        //print_r($this->_ipmam->vars['accessKey']);
         return $this->_ipmam->vars['accessKey'];
     }
 
@@ -50,50 +57,70 @@ class Ipmam extends AppModel
      * logout user
      */
     function logout() {
+
+        // If accesskey is set logout using that key
         if (isset($this->_ipmam->vars['accessKey'])) {
-            $logout = $this->_ipmam->f('Logout',array($this->_ipmam->vars['accessKey']));
-            $this->_ipmam->client('um')->Logout($logout);
+
+            // Get input object
+            $inputObj = $this->_ipmam->f('Logout',array($this->_ipmam->vars['accessKey']));
+
+            // Call function
+            $this->_ipmam->client('um')->Logout($inputObj);
+
+            // unset the variable
             unset($this->_ipmam->vars['accessKey']);
         }
     }
-/** getQuery **********************************************************/
+
     /**
-     * return ipmam query string
+     * return Ipmam AXF queryDoc
      */
     function getQueryDoc($search) {
+        // Init as array
         $axfArray = array();
+
+        // Store the AXF open tag in the array
         $axfArray[] = "<AXFRoot>";
 
-        $dmQuery = $this->_getDmquery();
+        // Get the dmQuery template
+        $dmQuery = $this->_getDmqueryTemplate();
 
+        // Replace each meta tag value with the named input value
         foreach ($search as $key=>$val) {
-            //echo "KEY: $key<br>";
+
+            // If the ATTRIBUTESEARCH key is reached - create maObjects for the items under ATTRIBUTESEARCH
             if ($key == 'ATTRIBUTESEARCH') {
-                //echo "KEY: $key<br>";
 
-                $attributeSearch = $this->_getAttributeSearch();
+                // Get the attributeSearch template
+                $attributeSearch = $this->_getAttributeSearchTemplate();
 
+                // Replace each meta tag value with the named input value
                 foreach ($val as $key=>$value) {
-                    //echo "KEY: $key<br>";
                     $attributeSearch = preg_replace("/>$key</",">$value<",$attributeSearch);
                 }
+
+                // Cat each maObject
                 $dmQuery .= $attributeSearch;
             } else {
+                // Replace each meta tag value with the named input value
                 $dmQuery = preg_replace("/>$key</",">$val<",$dmQuery);
             }
         }
 
+        // Add the maObject to the array
         $axfArray[] = $dmQuery;
+
+        // Close the AXF tag
         $axfArray[] = "</AXFRoot>";
 
+        // Join the AXF elements and return the AXF doc
         return implode("\n",$axfArray);
     }
 
     /**
-     *
-     * @return string
+     * return the dmQuery Template
      */
-    function _getDmquery() {
+    function _getDmqueryTemplate() {
         return "    <MAObject type='default' mdclass='DMQuery'>
         <GUID>theID</GUID>
         <Meta name='OBJECTCLASSES' format='string'>OBJECTCLASSES</Meta>
@@ -105,10 +132,9 @@ class Ipmam extends AppModel
     }
 
     /**
-     *
-     * @return string
+     * return the attributeSearch Template
      */
-    function _getAttributeSearch() {
+    function _getAttributeSearchTemplate() {
         return "    <MAObject type='default' mdclass='AttributeSearch'>
         <GUID />
         <Ref mdclass='DMQuery' name='QUERY'>theID</Ref>
@@ -119,16 +145,19 @@ class Ipmam extends AppModel
     }
 
     /**
-     *
-     * @param unknown_type $fields
-     * @return string
+     * Return the AXF hitList
      */
     function getHitListDoc($fields) {
+        // Init as array
         $axfArray = array();
+
+        // Add the AXF open tag to the array
         $axfArray[] = "<AXFRoot>";
 
+        // Init value to 0; this is a unique id for the hitlist attribute objects
         $guidId = 0;
 
+        // Create a hitList attribute object for each field and add them to an array
         foreach ($fields as $field) {
             $hitlistDoc[] = "    <MAObject type='default' mdclass='ModelHitlistAttribute'>
         <GUID dmname=''>$guidId</GUID>
@@ -138,26 +167,31 @@ class Ipmam extends AppModel
             $guidId++;
         }
 
+        // Add the required hitList object to the array
         $hitlistDoc[] = "    <MAObject type='default' mdclass='ModelHitlist'>
         <GUID dmname=''>theHitlist</GUID>
         <Meta name='MODIFYABLE' format='string' frate=''>1</Meta>
         <Meta name='USAGE' format='string' frate=''>RETRIEVAL</Meta>
         <Meta name='NAME' format='string' frate=''>theHitlist</Meta>
     </MAObject>";
+
+        // Join the hitlist elements and add to the array
         $axfArray[] = implode("\n",$hitlistDoc);
+
+        // add the close AXF tag
         $axfArray[] = "</AXFRoot>";
 
+        // Join and return the hitlist elements
         return implode("\n",$axfArray);
     }
 
-/************************************************************************/
-
     /**
-     *
+     * Execute an Ipmam search and return the results
      */
     function search($queryDoc, $hitlist) {
 
-        $searchExt2 = $this->_ipmam->f(
+        // Get an input object
+        $inputObj = $this->_ipmam->f(
             'SearchExt2',
             array (
                 $this->_ipmam->vars['accessKey'],
@@ -167,7 +201,7 @@ class Ipmam extends AppModel
             )
         );
 
-        $dmSearchResponse = $this->_ipmam->client('dmSearch')->SearchExt2($searchExt2);
+        $dmSearchResponse = $this->_ipmam->client('dmSearch')->SearchExt2($inputObj);
 
         return $dmSearchResponse->SearchExt2Result;
     }
@@ -176,24 +210,33 @@ class Ipmam extends AppModel
      * Returns an array of dmguids
      */
     function getGuids($searchResponseXml) {
+        // Init as array
         $guids = array();
+
+        // Create a new SimpleXmlElement to help parse the XML
         $xml = new SimpleXMLElement($searchResponseXml);
 
+        // Search for the GUIDs in the VIDEO class
         $guidXmls = $xml->xpath('/AXFRoot/MAObject[@mdclass="VIDEO"]/GUID');
 
+        // If guids were found store the GUIDs in an array
         if ($guidXmls) {
             foreach ($guidXmls as $node) {
-                $guids[] = sprintf('%s',$node);
+                // Store the string version of the SimpleXmlElement
+                $guids[] = strval($node);
             }
         }
+
+        // Natural Sort the GUIDs
         natcasesort($guids);
+
         return $guids;
     }
 
     /**
-     *
+     * Return the Representative essence package guid
      */
-    function getEpGuid($dmguid, $type) {
+    function getRepEpGuid($dmguid) {
 
         $inputObject = $this->_ipmam->f(
             'GetRepresentativeEssencePackage',
@@ -203,17 +246,17 @@ class Ipmam extends AppModel
             )
         );
 
-        //print_r($inputObject);
         $ep = $this->_ipmam->client('dmEssencesPackages')->GetRepresentativeEssencePackage($inputObject);
 
         return $ep->GetRepresentativeEssencePackageResult->EPGuid;
     }
 
     /**
-     *
+     * Return all EP guids
      */
     function getAllEpGuids($dmguid) {
 
+        // Get input Object
         $inputObject = $this->_ipmam->f(
             'ListAllEssencePackages',
             array (
@@ -222,16 +265,20 @@ class Ipmam extends AppModel
             )
         );
 
-        //print_r($inputObject);
+        // Get all essences
         $ep = $this->_ipmam->client('dmEssencesPackages')->ListAllEssencePackages($inputObject);
 
         $eps = $ep->ListAllEssencePackagesResult->EssencePackage;
 
+        // If an array is not return create an array
         if (!is_array($eps)){
             $eps = array($eps);
         }
+
+        // Init as array
         $epguids = array();
 
+        // Get the EPGUIDS and label them as RAW or MAIN
         foreach ($eps as $ep) {
             if ($ep->Title == 'RAW') {
                 $epguids['EPGUID-RAW'] = $ep->EPGuid;
@@ -244,10 +291,11 @@ class Ipmam extends AppModel
     }
 
     /**
-     *
+     * Get all EM objects
      */
-    function getAllEssences($epguid) {
+    function getAllEmObjects($epguid) {
 
+        // Get input object
         $inputObject = $this->_ipmam->f(
             'GetEMObject2InfosInEP',
             array (
@@ -256,46 +304,71 @@ class Ipmam extends AppModel
             )
         );
 
-        //print_r($inputObject);
+        // Get EM objects
         $em = $this->_ipmam->client('essenceManager')->GetEMObject2InfosInEP($inputObject);
-//print_r($em);
-        $esssenses = $em->GetEMObject2InfosInEPResult->EMObject2;
 
-        if (!is_array($esssenses)){
-            $esssenses = array($esssenses);
+        $emObjs = $em->GetEMObject2InfosInEPResult->EMObject2;
+
+        if (!is_array($emObjs)){
+            $emObjs = array($emObjs);
         }
+        //print_r($emObjs);
 
-        return $esssenses;
+        return $emObjs;
     }
 
     /**
-     *
+     * Get all EM objects with location
      */
     function getAllEssencesWithLocation($epguid) {
-        $essences = $this->getAllEssences($epguid);
 
-        ///$emguidlist = $this->_ipmam->f(
-        //        'emguidlist',
-        //        $essences
-       // );
-/*
-        $a = $this->_ipmam->f(
-            'ArrayOfString',
-            array (
-                '77e171ed-775f-415c-9071-24bcfe340497',
-                '0fd9475e-9f37-4c50-85d0-0b5952853add'
-           )
-        );
-*/
+        // Get all of the epguids
+        $emObjs = $this->getAllEmObjects($epguid);
 
-        //print_r($a);
-        //exit;
+        $emObjFilesizeTotal = 0;
 
-        foreach ($essences as $essence) {
-            $emguids[] = $essence->emguid;
+        // Get the emguid for each emObj
+        foreach ($emObjs as $emObj) {
+            $emguids[] = $emObj->emguid;
+
+            // Get input object
+            $inputObject = $this->_ipmam->f(
+                'GetEMObjectWithLocations',
+                array (
+                    $this->_ipmam->vars['accessKey'],
+                    $emObj->emguid
+                )
+            );
+
+            // Get emObjects with location
+            $response = $this->_ipmam->client('essenceManager')->GetEMObjectWithLocations($inputObject);
+
+            $emObjFilesize = $response->GetEMObjectWithLocationsResult->locations->EMLocation->filesize;
+            $emObjFilesizeTotal += $emObjFilesize;
+
+            $data['emguids'][$emObj->emguid]['filesize'] = $emObjFilesize;
+            $data['emguids'][$emObj->emguid]['streamtype'] = $response->GetEMObjectWithLocationsResult->emobj->streamtype;
+
+
+            // Get input object
+            $inputObject = $this->_ipmam->f(
+                'GetAccessPath',
+                array (
+                    $this->_ipmam->vars['accessKey'],
+                    $emObj->emguid,
+                    'UNC',
+                    'BOTH'
+                )
+            );
+            $response = $this->_ipmam->client('essenceManager')->GetAccessPath($inputObject);
+
+            $data['emguids'][$emObj->emguid]['location'] = $response->GetAccessPathResult;
+
         };
 
+        $data['emobjFilesize'] = $emObjFilesizeTotal;
 
+        // Get input object
         $inputObject = $this->_ipmam->f(
             'GetAccessPathForEMGuids',
             array (
@@ -305,19 +378,18 @@ class Ipmam extends AppModel
             )
         );
 
-        $reponse = $this->_ipmam->client('essenceManager')->GetAccessPathForEMGuids($inputObject);
-        $pathes = $reponse->GetAccessPathForEMGuidsResult->string;
-        print_r($pathes);
+        // Get access paths
+        //$response = $this->_ipmam->client('essenceManager')->GetAccessPathForEMGuids($inputObject);
 
-
-        exit;
-        //return $reponse;
+        //$locations = $response->GetAccessPathForEMGuidsResult->string;
+/* print_r($data);
+print_r($locations);
+exit; */
+        return $data;
     }
 
     /**
      *
-     * @param unknown_type $xmlIn
-     * @return multitype:string
      */
     function parseXml($xmlIn) {
         $prodTitle = '';
@@ -371,8 +443,7 @@ class Ipmam extends AppModel
     }
 
     /**
-     *
-     * @param unknown_type $data
+     * Return the production title
      */
     function getProductionTitle($data) {
         $keys = array_keys($data['DMGUIDS']);
@@ -381,11 +452,11 @@ class Ipmam extends AppModel
     }
 
     /**
-     *
      * @param unknown_type $data
      */
     function barcodeCount(&$data) {
         $data['barcodeCount']['content'] = '00:00:00:00';
+        $grandTotal = 0;
 
         foreach($data['DMGUIDS'] as $key=>$dmguid) {
 
@@ -403,20 +474,30 @@ class Ipmam extends AppModel
             $duration = $bcc{$dmguid['BARCODE']}['duration'];
 
             $bcc{$dmguid['BARCODE']}['duration'] = $this->sumTrt($duration, $dmguid['TAPE_RUNNING_TIME']);
-            $bcc{$dmguid['BARCODE']}['size'] = 'size';
+
+            list($emGuids, $dmFilesize) = $this->getFilelocationsWithSize($key);
+            continue;
+            $bcc{$dmguid['BARCODE']}['locations'] = $emGuids;
+            $bcc{$dmguid['BARCODE']}['filesize'] = $dmFilesize;
+
+            $grandTotal += $dmFilesize;
+
             $data['barcodeCount']['content'] = $this->sumTrt($data['barcodeCount']['content'], $dmguid['TAPE_RUNNING_TIME']);
+
         }
 
         $data['barcodeCount']['barcodes'] = $bcc;
         $data['barcodeCount']['count'] = count($data['barcodeCount']['barcodes']);
         $data['barcodeCount']['clips'] = count($data['DMGUIDS']);
+        $data['barcodeCount']['filesize'] = $grandTotal;
     }
 
     /**
-     *
-     * @param unknown_type $dmguid
+     * Get CLIP_TAPE_DESCRIPTION using dmObjectAccess so that the data is not truncated
      */
     function getClipTapeDescrption($dmguid) {
+
+        // A video source object is needed so build the guid if it is not supplied
         if (preg_match('/^V_(.+)_.+$/',$dmguid,$matches)) {
             $vsObj = "VS_" . $matches[1];
         } elseif (preg_match('/^V?/',$dmguid)) {
@@ -425,6 +506,7 @@ class Ipmam extends AppModel
             $vsObj = $dmguig;
         }
 
+        // Get input object
         $inputObject = $this->_ipmam->f(
             'GetDMAttribute',
             array (
@@ -434,16 +516,14 @@ class Ipmam extends AppModel
             )
         );
 
+        // Get CLIP_TAPE_DESCRIPTION
         $response = $this->_ipmam->client('dmObjectAccess')->GetDMAttribute($inputObject);
 
         return $response->GetDMAttributeResult;
     }
 
     /**
-     *
-     * @param unknown_type $trt
-     * @param unknown_type $tapeRunningTime
-     * @return unknown
+     * sum the TRT
      */
     function sumTrt(&$trt, $tapeRunningTime) {
         $sumSec = $this->tcToSec($trt);
@@ -454,75 +534,92 @@ class Ipmam extends AppModel
     }
 
     /**
-     *
-     * @param unknown_type $secs
-     * @param unknown_type $framerate
-     * @return string
+     * Convert seconds to timecode
      */
     function secToTc($secs, $framerate = 29.97) {
 
+        // get the fractional part of the seconds
         $parSecs = fmod($secs, 1);
 
-
+        // Get the whole seconds
         $hourMinSecs = $secs - $parSecs;
 
+        // Calculate the number of frames
         $frames = floor($parSecs * $framerate);
 
+        // Calculate the number of hours
         $hours = floor($hourMinSecs / 3600);
+
+        // Calculate the remaining seconds
         $minSecs = $hourMinSecs - ($hours * 3660);
 
+        // Calculate the number of minutes
         $mins =  floor($minSecs / 60);
+
+        // Calculate the remaining seconds
         $secs = $minSecs - ($mins * 60);
 
+        // Build the timecode string
         $tc = sprintf("%02s:%02s:%02s:%02s",$hours,$mins,$secs,$frames);
 
         return $tc;
     }
 
     /**
-     *
-     * @param unknown_type $input
-     * @param unknown_type $framerate
-     * @return number
+     * Convert timecode to seconds
      */
     function tcToSec($input, $framerate = 29.97) {
 
+        // remove any extra spaces around the input
         $input = trim($input);
 
+        // list of possible delimiters
         $punct= array(":", ";", ".", ",");
+
+        // Replace all delimiters with :
         $input = str_replace( $punct, ":", $input);
 
+        // Break TC into segments
         $vals = explode(':', $input);
 
+        // array to hold tc segments
         $tc = array(
-                'HOURS'=>0,
-                'MINS'=>0,
-                'SECS'=>0,
-                'FRAMES'=>0
-            );
+            'HOURS'=>0,
+            'MINS'=>0,
+            'SECS'=>0,
+            'FRAMES'=>0
+        );
 
+        // stack segments into array
         foreach ($tc as $key=>$val) {
             $tc[$key] = array_shift($vals);
         }
 
+        // Multiply each segment by it's place value then divide by the framerate to get the seconds value
         $secs = ($tc['HOURS']*3600) + ($tc['MINS']*60) + $tc['SECS'] + ($tc['FRAMES'] / $framerate);
 
         return $secs;
     }
 
     /**
-     *
-     * @param unknown_type $barcode
-     * @return unknown
+     * Get the files for the gven barcode
      */
-    function getFileDetails($barcode) {
-        echo $barcode;
-        $epGuids = $this->getAllEpGuids($barcode);
+    function getFilelocationsWithSize($dmguid) {
+        //echo $dmguid;
+        $epGuids = $this->getAllEpGuids($dmguid);
+
+        $dmguidFilesize = 0;
 
         foreach ($epGuids as $epGuid) {
-            $ep{$epGuid} = $this->getAllEssencesWithLocation($epGuid);
+            $emguid = $this->getAllEssencesWithLocation($epGuid);
+            $dmguidFilesize += $emguid['emobjFilesize'];
+            $emguids[] = $emguid;
         }
-        return $ep;
+
+        //print_r($emguids);
+        //exit;
+
+        return array($emguids, $dmguidFilesize);
     }
 }
 

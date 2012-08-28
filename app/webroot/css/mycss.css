@@ -102,6 +102,7 @@ table tr td {
 
 th {
 	font-size: 0.7em;
+	text-align: left;
 }
 
 .col1 {
@@ -135,5 +136,10 @@ th {
 }
 
 .col7 {
-	width: 45px;
+	width: 70px;
+	text-align: right;
+}
+
+#item, #barcode, #desc, #type, #clips, #trt, #size {
+	text-align: left;
 }

@@ -19,41 +19,6 @@ class IpmamController extends AppController {
         $production = 'x65600';
         $dmguids = $this->getDmguidsByProduction($production);
         $this->set('guids', $dmguids);
-/*
-        $search = array('OBJECTCLASSES' => 'VIDEO',
-                        'FIRSTHIT' => '0',
-                        'MAXHITS' => '999999',
-                        'SIMPLESEARCH' => '',
-                        'ATTRIBUTESEARCH' => array(
-                                        'ATTRIBUTE' => 'PRODUCTION_NUMBER',
-                                        'SEARCHSTRING' => 'x65600')
-                     );
-
-        $queryDoc = $this->Ipmam->getQueryDoc($search);
-
-        $this->set('queryDoc',$queryDoc);
-
-        $searchResponseXml = $this->Ipmam->search($queryDoc);
-
-        $this->set('searchResponseXml',$searchResponseXml);
-
-        $dmguids = $this->Ipmam->getGuids($searchResponseXml);
-
-        $this->set('guids', $dmguids);
-*/
-return;
-        foreach ($dmguids as $dmguid) {
-            //echo "GUID: $guid<br>";
-            $epguids = $this->Ipmam->getAllEpGuids($dmguid);
-            $vsObjects['DMGUID'][$dmguid]['EPGUID'] = $epguids;
-
-            foreach ($epguids as $epguid) {
-                $essences = $this->Ipmam->getAllEssences($epguid);
-                $vsObjects['DMGUID'][$dmguid]['EPGUID'][$epguid]['ESSENCE'] = $essences;
-            }
-        }
-
-        $this->set('repEpGuid',$vsObjects);
 
     }
 
@@ -62,6 +27,7 @@ return;
      *
      */
     function getDmguidsByProduction($prodNum, $maxHits) {
+        // Define the settings for the search queryDoc
         $search = array(
             'OBJECTCLASSES' => 'VIDEO',
             'FIRSTHIT' => '0',
@@ -72,31 +38,31 @@ return;
                 'SEARCHSTRING' => $prodNum
             )
         );
-//echo "MAX_Hits: " . $params['maxhits'] ."<br>";
+
+        // Get the AXF queryDoc from the ipmam model
         $queryDoc = $this->Ipmam->getQueryDoc($search);
 
-        $hitlist = $this->Ipmam->getHitListDoc(
-                    array(
-                        'BARCODE',
-                        'CLIP_ID',
-                        'PRODUCTION_NUMBER',
-                        'PRODUCTION_TITLE',
-                        'ASSET_TAPE_FORMAT',
-                        'CONTENT_TYPE',
-                        'START_TC',
-                        'END_TC',
-                        'TAPE_RUNNING_TIME'
-                    )
-                );
+        // Define data types to include in the hitList
+        $itemsToRetrive = array(
+            'BARCODE',
+            'CLIP_ID',
+            'PRODUCTION_NUMBER',
+            'PRODUCTION_TITLE',
+            'ASSET_TAPE_FORMAT',
+            'CONTENT_TYPE',
+            'START_TC',
+            'END_TC',
+            'TAPE_RUNNING_TIME'
+        );
 
-        $this->set('queryDoc',$queryDoc);
-        $this->set('queryDoc',$hitlist);
+        // Get the AXF hitList from the ipmam model
+        $hitlist = $this->Ipmam->getHitListDoc($itemsToRetrive);
 
+        // Execute the search
         $searchResponseXml = $this->Ipmam->search($queryDoc, $hitlist);
+
+        // Parse the hitList XML and build an array of DMGUIDS
         $data['DMGUIDS'] = $this->Ipmam->parseXml($searchResponseXml);
-//print_r($dmguids);
-//exit;
-        //$this->set('searchResponseXml',$searchResponseXml);
 
         return $data;
     }
@@ -104,24 +70,28 @@ return;
 
     /**
      *
-     * @return unknown
+     * Get the details for the given production
      */
     function getProductionData() {
         $prodNum = $this->params['named']['prod'];
         $maxHits = $this->params['named']['maxhits'];
 
-        set_time_limit(120);
+        // Set the max run time for the web session
+        set_time_limit(360);
 
-        $this->Ipmam->login();
 
+
+        // Get the top level search results for this production
         $data = $this->getDmguidsByProduction($prodNum, $maxHits);
 
+        // Get the production title
         $data['prodTitle'] = $this->Ipmam->getProductionTitle($data);
+
+        // Get the count of the barcodes returned
         $this->Ipmam->barcodeCount($data);
 
         //print_r($data);
         return $data;
-
     }
 
     /**
@@ -134,4 +104,6 @@ return;
 
         $this->set('data', $data);
     }
+
+
 }

@@ -1,5 +1,15 @@
 <?php
 
+function formatBytes($num, $cnt=0){
+    $placeValues = array('B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB');
+
+    if ($num/1024 < 1) {
+        return sprintf("%0.2f %s", $num, $placeValues[$cnt]);
+    } else {
+        return formatBytes(($num/1024),++$cnt);
+    }
+
+}
 ?>
 <div class=section id=summary>
     <h1>Summary</h1>
@@ -21,7 +31,7 @@
     <div class=summary-block id=summary-size>
         Total Size<br>
         <hr>
-        <?php echo $totSize ?>
+        <?php echo formatBytes($data['barcodeCount']['filesize']) ?>
     </div>
 </div>
 
@@ -31,13 +41,13 @@
     <div id=summary-barcodes-list>
         <table id="barcode-table">
             <tr>
-                <th class="col1" >Item</th>
-                <th class="col2" >Barcode</th>
-                <th class="col3" >Description</th>
-                <th class="col4" >Type</th>
-                <th class="col5" >Clips</th>
-                <th class="col6" >Duration</th>
-                <th class="col7" >Size</th>
+                <th class="col1" id="item">Item</th>
+                <th class="col2" id="barcode">Barcode</th>
+                <th class="col3" id="desc">Description</th>
+                <th class="col4" id="type">Type</th>
+                <th class="col5" id="clips">Clips</th>
+                <th class="col6" id="trt">Duration</th>
+                <th class="col7" id="size">Size</th>
             </tr>
             <?php
                 $i = 0;
@@ -49,7 +59,7 @@
                     <td class="col4" ><?php echo $value['type']; ?></td>
                     <td class="col5" ><?php echo $value['clips']; ?></td>
                     <td class="col6" ><?php echo $value['duration']; ?></td>
-                    <td class="col7" ><?php echo $value['size']; ?></td>
+                    <td class="col7" ><?php echo formatBytes($value['filesize']); ?></td>
                 </tr>
             <?php endforeach;?>
 
