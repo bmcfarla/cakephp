@@ -1,0 +1,1159 @@
+<?xml version="1.0"?>
+<AXFRoot>
+	<MAObject type="default" mdclass="VIDEO">
+		<GUID dmname="">V_110534NG_I0</GUID>
+		<Meta name="COPYRIGHT" format="string" frate="" />
+		<Meta name="SHORTS_SUMMARY_NOTES" format="string" frate="" />
+		<Meta name="GEOID" format="string" frate="" />
+		<Meta name="MATERIALS_RELEASES_NOTES" format="string" frate="" />
+		<Meta name="VIDEOANALYSISSTATUS" format="string" frate="">9</Meta>
+		<Meta name="PTREE_FORMAT" format="string" frate="" />
+		<Meta name="ENCODER_USER_NAME" format="string" frate="" />
+		<Meta name="PARENT_CATALOGUING_NOTES" format="string" frate="" />
+		<Meta name="DEPARTMENT_OF_ORIGIN" format="string" frate="" />
+		<Meta name="PRODUCTION_CLASS" format="string" frate="" />
+		<Meta name="ON_EDUCATION_WEBSITE" format="string" frate="" />
+		<Meta name="NOTES_AND_CONCAT" format="string" frate="" />
+		<Meta name="ONE_INCH_MASTER" format="string" frate="" />
+		<Meta name="MUSIC_RIGHTS_RELEASES_NOTES" format="string" frate="" />
+		<Meta name="FINAL_QA_COMPLETE_DATE" format="string" frate="" />
+		<Meta name="MUSIC_RIGHTS_RELEASES" format="string" frate="" />
+		<Meta name="RESOLUTION" format="string" frate="" />
+		<Meta name="OUTS_INFO" format="string" frate="" />
+		<Meta name="DROP_NON" format="string" frate="" />
+		<Meta name="HIRES_VA_STATE" format="string" frate="" />
+		<Meta name="AUDIO_INFO_TRACK8" format="string" frate="" />
+		<Meta name="AUDIO_INFO_TRACK7" format="string" frate="" />
+		<Meta name="AUDIO_INFO_TRACK6" format="string" frate="" />
+		<Meta name="AUDIO_INFO_TRACK5" format="string" frate="" />
+		<Meta name="AUDIO_INFO_TRACK4" format="string" frate="">1058</Meta>
+		<Meta name="AUDIO_INFO_TRACK3" format="string" frate="">1056</Meta>
+		<Meta name="AUDIO_INFO_TRACK2" format="string" frate="">1019</Meta>
+		<Meta name="BROADCAST_TITLE" format="string" frate="" />
+		<Meta name="ARTIST_CODE" format="string" frate="" />
+		<Meta name="SOONEST_EXPIRATION_DATE" format="string" frate="" />
+		<Meta name="EXPIRATION_NOTE" format="string" frate="" />
+		<Meta name="ELIGIBLE_FOR_TE_DISTRIBUTION" format="string" frate="" />
+		<Meta name="PERSONAL_RELEASES" format="string" frate="" />
+		<Meta name="CAMERA_GPS_LATITUDE" format="string" frate="" />
+		<Meta name="CAMERA_ORIGINAL" format="string" frate="" />
+		<Meta name="PREDOMINANT_COLOR" format="string" frate="" />
+		<Meta name="BARCODE_ACCESSION_DATE" format="string" frate="" />
+		<Meta name="ARTIFACT_RELEASES_LL" format="string" frate="" />
+		<Meta name="SOUND_EFFECTS_RIGHTS_NOTES" format="string" frate="" />
+		<Meta name="RIGHTS_REVIEW_COMPLETE_BY" format="string" frate="" />
+		<Meta name="IN_OUT_PROGRAM" format="string" frate="" />
+		<Meta name="EMBARGO_HOLDBACK" format="string" frate="" />
+		<Meta name="VERSION_LANG" format="string" frate="" />
+		<Meta name="EPISODE_NUMBER" format="string" frate="">00</Meta>
+		<Meta name="TAPE_CAPTION" format="string" frate="" />
+		<Meta name="OWNERSHIP" format="string" frate="" />
+		<Meta name="SENT_TO_THOUGHT_EQUITY" format="string" frate="" />
+		<Meta name="REF_DSDB_ID" format="string" frate="" />
+		<Meta name="START_TC" format="string" frate="">00:59:42:03</Meta>
+		<Meta name="ALTERNATE_FIELD_BARCODE" format="string" frate="" />
+		<Meta name="WORKFLOW" format="string" frate="" />
+		<Meta name="DATE_FLAGGED_ELIGIBLE_FOR_RF" format="string" frate="" />
+		<Meta name="BARCODE_CLASS" format="string" frate="" />
+		<Meta name="HD_FILE_AVAILABLE" format="string" frate="" />
+		<Meta name="LANGUAGE" format="string" frate="" />
+		<Meta name="SHOTSHEET_INFO" format="string" frate="" />
+		<Meta name="OVERALL_RIGHTS_NOTES" format="string" frate="" />
+		<Meta name="CAMERA_TYPE" format="string" frate="" />
+		<Meta name="CIR_PHYSICAL_TYPE" format="string" frate="" />
+		<Meta name="CATALOGUING_COMPLETE" format="string" frate="" />
+		<Meta name="DATE_SHIPPED_TO_TE_DISTR" format="string" frate="" />
+		<Meta name="PRODUCER" format="string" frate="" />
+		<Meta name="FILM_AVAILABLE" format="string" frate="" />
+		<Meta name="CONTENT_TYPE" format="string" frate="">24</Meta>
+		<Meta name="BROWSE_VA_STATE" format="string" frate="">2</Meta>
+		<Meta name="SHOTSHEETS_AVAILABLE" format="string" frate="" />
+		<Meta name="REF_VIDEOBANK_ID" format="string" frate="" />
+		<Meta name="NARRATION_WRITER_RELEASES" format="string" frate="" />
+		<Meta name="RIGHTS_REVIEW_COMPLETE_DATE" format="string" frate="" />
+		<Meta name="ASPECT_RATIO" format="string" frate="" />
+		<Meta name="REF_PILOTWARE_ID" format="string" frate="" />
+		<Meta name="QA_NOTES" format="string" frate="" />
+		<Meta name="PRODUCTION_TITLE" format="string" frate="">SPEED KILLS
+		</Meta>
+		<Meta name="UMBRELLA_AGREEMENT" format="string" frate="" />
+		<Meta name="PARENT_CHILD" format="string" frate="" />
+		<Meta name="POST_NUMBER" format="string" frate="" />
+		<Meta name="LOCATION_RELEASE_NOTES" format="string" frate="" />
+		<Meta name="RIGHTS_REVIEW_COMPLETE" format="string" frate="" />
+		<Meta name="TERRITORY_RIGHTS_NOTES" format="string" frate="" />
+		<Meta name="BARCODE_CREATE_DATE" format="string" frate="" />
+		<Meta name="COLOR" format="string" frate="" />
+		<Meta name="EMBARGO_HOLDBACK_NOTES" format="string" frate="" />
+		<Meta name="HD_FILE_SENT_TO_TE" format="string" frate="" />
+		<Meta name="AUDIENCE_LEVEL" format="string" frate="" />
+		<Meta name="AUDIO_TYPE" format="string" frate="" />
+		<Meta name="ENCODE_QC_COMPLETE" format="string" frate="" />
+		<Meta name="END_TC" format="string" frate="">01:53:35:02</Meta>
+		<Meta name="PARENT_CATALOGUING_COMPLETE" format="string" frate="" />
+		<Meta name="AIR_DATE" format="string" frate="" />
+		<Meta name="AWARDS" format="string" frate="" />
+		<Meta name="OVERALL_RIGHTS_CONTROL_NOTES" format="string" frate="" />
+		<Meta name="MAINTITLE" format="string" frate="">110534NG_0000</Meta>
+		<Meta name="OWNERSHIP_RIGHTS_NOTES" format="string" frate="" />
+		<Meta name="NOTES" format="string" frate="" />
+		<Meta name="LOG_NOTES" format="string" frate="" />
+		<Meta name="CLIP_TAPE_DESCRIPTION" format="string" frate="" />
+		<Meta name="NATIVE_FORMAT_RESOLUTION" format="string" frate="" />
+		<Meta name="EPISODE_NAME" format="string" frate="">SPEED KILLS
+		</Meta>
+		<Meta name="SD_FILE_SENT_TO_TE" format="string" frate="" />
+		<Meta name="FINAL_QA_COMPLETE" format="string" frate="" />
+		<Meta name="MOVE_TO_WORKFLOW" format="string" frate="" />
+		<Meta name="SALES_PROCEDURES" format="string" frate="" />
+		<Meta name="HD" format="string" frate="" />
+		<Meta name="CAMERA_ROLL" format="string" frate="" />
+		<Meta name="HD_FILE_COPIED_TO_DRIVE_FOR_TE" format="string"
+			frate="" />
+		<Meta name="CONTENT_REVIEW_COMPLETE_DATE" format="string" frate="" />
+		<Meta name="REF_PRODUCTION_ID" format="string" frate="" />
+		<Meta name="GENDER" format="string" frate="" />
+		<Meta name="REF_SOURCE_DB" format="string" frate="">Essence
+			Registration Service</Meta>
+		<Meta name="REGISTRATION_DATE" format="string" frate="">20110921
+		</Meta>
+		<Meta name="AUDIO_INFO_TRACK1" format="string" frate="">1017</Meta>
+		<Meta name="DATE_ENCODED" format="string" frate="" />
+		<Meta name="NARR_WRITER_RELEASE_TYPE" format="string" frate="" />
+		<Meta name="IMAGEID" format="string" frate="">0</Meta>
+		<Meta name="REF_STAR_ID" format="string" frate="" />
+		<Meta name="PART" format="string" frate="" />
+		<Meta name="AGE" format="string" frate="" />
+		<Meta name="RIGHTS_INFO" format="string" frate="" />
+		<Meta name="INTL_HV_RELEASE" format="string" frate="" />
+		<Meta name="ROLL_NUMBER" format="string" frate="" />
+		<Meta name="GEOGRAPHIC_LOCATIONS" format="string" frate="" />
+		<Meta name="SENT_TO_TE_DISTRIBUTION" format="string" frate="" />
+		<Meta name="IS_SOURCE_CLIP" format="string" frate="" />
+		<Meta name="AUDIO_AVAILABLE" format="string" frate="" />
+		<Meta name="NON_THEATRIC_RIGHTS" format="string" frate="" />
+		<Meta name="COMPOSITION_AND_EFFECT" format="string" frate="" />
+		<Meta name="LONGTITLE" format="string" frate="" />
+		<Meta name="SEASON" format="string" frate="" />
+		<Meta name="KEYWORD_ENTRY" format="string" frate="" />
+		<Meta name="OVERALL_RIGHTS_CODE" format="string" frate="" />
+		<Meta name="STAR_NUMBER" format="string" frate="" />
+		<Meta name="NATIVE_FORMAT" format="string" frate="" />
+		<Meta name="CATALOGING_STATUS" format="string" frate="" />
+		<Meta name="SERIES_TITLE" format="string" frate="" />
+		<Meta name="PUBLISH" format="string" frate="" />
+		<Meta name="EXCERPTING_RULES" format="string" frate="" />
+		<Meta name="STANDARD" format="string" frate="" />
+		<Meta name="CONTENT_REVIEW_COMPLETE" format="string" frate="" />
+		<Meta name="ERA" format="string" frate="" />
+		<Meta name="SOUND_EFFECTS_RIGHTS" format="string" frate="" />
+		<Meta name="REASON_FOR_HOLD" format="string" frate="" />
+		<Meta name="TAPE_NUMBER" format="string" frate="" />
+		<Meta name="SOURCE_ID" format="string" frate="" />
+		<Meta name="ELIGIBLE_FOR_RF" format="string" frate="" />
+		<Meta name="NG_OWNERSHIP_OF_OUTS" format="string" frate="" />
+		<Meta name="BARCODE" format="string" frate="">110534NG</Meta>
+		<Meta name="NON_THEATRIC_RIGHTS_NOTES" format="string" frate="" />
+		<Meta name="UNC_MOV_TO_TE_FOR_WEB" format="string" frate="" />
+		<Meta name="LEVEL" format="string" frate="" />
+		<Meta name="BARCODE_LABEL" format="string" frate="">Medium
+			06/27/2011</Meta>
+		<Meta name="LOCATION_RELEASES" format="string" frate="" />
+		<Meta name="TAPE_LABEL_INFO" format="string" frate="" />
+		<Meta name="ORIGINAL_CAMERA_ELEMENT" format="string" frate="">45
+		</Meta>
+		<Meta name="TERRITORY" format="string" frate="" />
+		<Meta name="PRODUCTION_OWNER" format="string" frate="" />
+		<Meta name="PRODUCTION_TYPE" format="string" frate="" />
+		<Meta name="ENCODER_NOTES" format="string" frate="" />
+		<Meta name="CAM_ORIG_LENGTH" format="string" frate="" />
+		<Meta name="TAPE_RUNNING_TIME" format="string" frate="">00:53:53:00
+		</Meta>
+		<Meta name="FINAL_QA_COMPLETE_BY" format="string" frate="" />
+		<Meta name="ASSET_ENTERED_BY" format="string" frate="" />
+		<Meta name="INGEST_STATUS" format="string" frate="" />
+		<Meta name="ASSET_TAPE_FORMAT" format="string" frate="">126</Meta>
+		<Meta name="LOCATION_RIGHTS_NOTES" format="string" frate="" />
+		<Meta name="OBJECT_CLASS" format="string" frate="">8</Meta>
+		<Meta name="VB_EDL_TIMECODE_ADJUST" format="string" frate="" />
+		<Meta name="HD_AVAILABLE" format="string" frate="" />
+		<Meta name="SHOOT_DATE" format="string" frate="" />
+		<Meta name="ARTIFACT_RIGHTS_NOTES" format="string" frate="" />
+		<Meta name="ETHNICITY" format="string" frate="" />
+		<Meta name="PERSONAL_RELEASE_NOTES" format="string" frate="" />
+		<Meta name="ASSET_TAPE_NUMBER" format="string" frate="" />
+		<Meta name="DISTRIBUTION_STRAND" format="string" frate="">14</Meta>
+		<Meta name="OBJECT_LOCKED" format="string" frate="" />
+		<Meta name="UMBRELLA_AGREEMENT_NOTES" format="string" frate="" />
+		<Meta name="CAMERA_GPS_LONGITUDE" format="string" frate="" />
+		<Meta name="ON_PROGRAMMING_WEBSITE" format="string" frate="" />
+		<Meta name="PRODUCTION_NUMBER" format="string" frate="">X65600
+		</Meta>
+		<Meta name="FRAMERATE" format="string" frate="" />
+		<Meta name="ORIGINAL_CAPTURE_METHOD" format="string" frate="" />
+		<Meta name="ASSET_TYPE" format="string" frate="" />
+		<Meta name="CATALOGING_NOTES" format="string" frate="" />
+		<Meta name="NARR_WRITER_RIGHTS_NOTES" format="string" frate="" />
+		<Meta name="PTREE" format="string" frate="" />
+		<Meta name="MATERIALS_RELEASES" format="string" frate="" />
+		<Meta name="REGISTRATION_TIME" format="string" frate="">014106
+		</Meta>
+		<Meta name="SYSTEM_OBJECTOWNER" format="string" frate="">DEFAULT
+		</Meta>
+		<Meta name="ARTIFACT_RELEASES" format="string" frate="" />
+		<Meta name="CONTENT_REVIEWED_BY" format="string" frate="" />
+		<Meta name="SHOW_MASTER_TYPE" format="string" frate="" />
+		<Meta name="CLIP_ID" format="string" frate="">0</Meta>
+		<Meta name="STOCKTYPE" format="string" frate="" />
+		<StratumEx name="RESTRICTION_VIDEO" />
+		<StratumEx name="EDITORIAL_CONTENT" />
+		<StratumEx name="RESTRICTION_VIDEO_DESCRIPTION" />
+		<StratumEx name="SOURCE_CLIP" />
+		<StratumEx name="DEFAULT">
+			<Group orderidx="0" id="0" lastchanged="00010101000000">
+				<Segment id="0" begin="0" end="1468" />
+				<Segment id="1" begin="1502" end="19553" />
+				<Segment id="2" begin="19586" end="21755" />
+				<Segment id="3" begin="21788" end="22489" />
+				<Segment id="4" begin="22523" end="22990" />
+				<Segment id="5" begin="23023" end="24157" />
+				<Segment id="6" begin="24191" end="25826" />
+				<Segment id="7" begin="25859" end="26927" />
+				<Segment id="8" begin="26960" end="29396" />
+				<Segment id="9" begin="29429" end="29763" />
+				<Segment id="10" begin="29796" end="32432" />
+				<Segment id="11" begin="32466" end="34168" />
+				<Segment id="12" begin="34201" end="36870" />
+				<Segment id="13" begin="36904" end="38172" />
+				<Segment id="14" begin="38205" end="39540" />
+				<Segment id="15" begin="39573" end="41074" />
+				<Segment id="16" begin="41108" end="44912" />
+				<Segment id="17" begin="44945" end="47581" />
+				<Segment id="18" begin="47614" end="48916" />
+				<Segment id="19" begin="48949" end="50317" />
+				<Segment id="20" begin="50350" end="51985" />
+				<Segment id="21" begin="52019" end="53820" />
+				<Segment id="22" begin="53854" end="54688" />
+				<Segment id="23" begin="54721" end="55522" />
+				<Segment id="24" begin="55556" end="57191" />
+				<Segment id="25" begin="57224" end="59893" />
+				<Segment id="26" begin="59927" end="62095" />
+				<Segment id="27" begin="62129" end="62596" />
+				<Segment id="28" begin="62629" end="64431" />
+				<Segment id="29" begin="64464" end="65232" />
+				<Segment id="30" begin="65265" end="67701" />
+				<Segment id="31" begin="67734" end="69036" />
+				<Segment id="32" begin="69069" end="71672" />
+				<Segment id="33" begin="71705" end="73574" />
+				<Segment id="34" begin="73607" end="74708" />
+				<Segment id="35" begin="74741" end="75976" />
+				<Segment id="36" begin="76009" end="76944" />
+				<Segment id="37" begin="76977" end="85853" />
+				<Segment id="38" begin="85886" end="91225" />
+				<Segment id="39" begin="91258" end="109676" />
+				<Segment id="40" begin="109710" end="112079" />
+				<Segment id="41" begin="112112" end="114081" />
+				<Segment id="42" begin="114114" end="119553" />
+				<Segment id="43" begin="119586" end="121855" />
+				<Segment id="44" begin="121889" end="123123" />
+				<Segment id="45" begin="123156" end="124625" />
+				<Segment id="46" begin="124658" end="128929" />
+				<Segment id="47" begin="128962" end="131798" />
+				<Segment id="48" begin="131832" end="133033" />
+				<Segment id="49" begin="133066" end="135035" />
+				<Segment id="50" begin="135068" end="146046" />
+				<Segment id="51" begin="146079" end="148248" />
+				<Segment id="52" begin="148282" end="151084" />
+				<Segment id="53" begin="151118" end="152953" />
+				<Segment id="54" begin="152986" end="153487" />
+				<Segment id="55" begin="153520" end="155022" />
+				<Segment id="56" begin="155055" end="156456" />
+				<Segment id="57" begin="156490" end="160527" />
+				<Segment id="58" begin="160561" end="164131" />
+				<Segment id="59" begin="164164" end="165199" />
+				<Segment id="60" begin="165232" end="167501" />
+				<Segment id="61" begin="167534" end="169536" />
+				<Segment id="62" begin="169570" end="171038" />
+				<Segment id="63" begin="171071" end="175142" />
+				<Segment id="64" begin="175175" end="175642" />
+				<Segment id="65" begin="175676" end="178011" />
+				<Segment id="66" begin="178045" end="181181" />
+				<Segment id="67" begin="181215" end="183650" />
+				<Segment id="68" begin="183684" end="185419" />
+				<Segment id="69" begin="185452" end="189590" />
+				<Segment id="70" begin="189623" end="191692" />
+				<Segment id="71" begin="191725" end="192926" />
+				<Segment id="72" begin="192960" end="193927" />
+				<Segment id="73" begin="193961" end="194428" />
+				<Segment id="74" begin="194461" end="196663" />
+				<Segment id="75" begin="196697" end="198265" />
+				<Segment id="76" begin="198298" end="202803" />
+				<Segment id="77" begin="202836" end="207908" />
+				<Segment id="78" begin="207941" end="214848" />
+				<Segment id="79" begin="214882" end="217751" />
+				<Segment id="80" begin="217784" end="220354" />
+				<Segment id="81" begin="220387" end="223490" />
+				<Segment id="82" begin="223524" end="231698" />
+				<Segment id="83" begin="231732" end="234968" />
+				<Segment id="84" begin="235002" end="239907" />
+				<Segment id="85" begin="239940" end="251485" />
+				<Segment id="86" begin="251518" end="254288" />
+				<Segment id="87" begin="254321" end="257257" />
+				<Segment id="88" begin="257291" end="259359" />
+				<Segment id="89" begin="259393" end="261762" />
+				<Segment id="90" begin="261795" end="262129" />
+				<Segment id="91" begin="262162" end="263130" />
+				<Segment id="92" begin="263163" end="263864" />
+				<Segment id="93" begin="263897" end="264264" />
+				<Segment id="94" begin="264298" end="264765" />
+				<Segment id="95" begin="264798" end="265165" />
+				<Segment id="96" begin="265199" end="266433" />
+				<Segment id="97" begin="266466" end="268535" />
+				<Segment id="98" begin="268569" end="271672" />
+				<Segment id="99" begin="271705" end="274808" />
+				<Segment id="100" begin="274842" end="276410" />
+				<Segment id="101" begin="276443" end="279413" />
+				<Segment id="102" begin="279446" end="282616" />
+				<Segment id="103" begin="282649" end="285786" />
+				<Segment id="104" begin="285819" end="290257" />
+				<Segment id="105" begin="290290" end="293193" />
+				<Segment id="106" begin="293227" end="295295" />
+				<Segment id="107" begin="295329" end="297497" />
+				<Segment id="108" begin="297531" end="301602" />
+				<Segment id="109" begin="301635" end="304605" />
+				<Segment id="110" begin="304638" end="306640" />
+				<Segment id="111" begin="306673" end="309076" />
+				<Segment id="112" begin="309109" end="312546" />
+				<Segment id="113" begin="312579" end="317351" />
+				<Segment id="114" begin="317384" end="326593" />
+				<Segment id="115" begin="326627" end="331331" />
+				<Segment id="116" begin="331365" end="334601" />
+				<Segment id="117" begin="334635" end="339640" />
+				<Segment id="118" begin="339673" end="345312" />
+				<Segment id="119" begin="345345" end="348982" />
+				<Segment id="120" begin="349016" end="350951" />
+				<Segment id="121" begin="350984" end="352920" />
+				<Segment id="122" begin="352953" end="355556" />
+				<Segment id="123" begin="355589" end="358325" />
+				<Segment id="124" begin="358358" end="361061" />
+				<Segment id="125" begin="361094" end="364131" />
+				<Segment id="126" begin="364164" end="367167" />
+				<Segment id="127" begin="367201" end="371338" />
+				<Segment id="128" begin="371371" end="383684" />
+				<Segment id="129" begin="383717" end="387321" />
+				<Segment id="130" begin="387354" end="392860" />
+				<Segment id="131" begin="392893" end="397631" />
+				<Segment id="132" begin="397664" end="404338" />
+				<Segment id="133" begin="404371" end="420254" />
+				<Segment id="134" begin="420287" end="428328" />
+				<Segment id="135" begin="428362" end="431798" />
+				<Segment id="136" begin="431832" end="432332" />
+				<Segment id="137" begin="432366" end="437804" />
+				<Segment id="138" begin="437838" end="441742" />
+				<Segment id="139" begin="441775" end="448448" />
+				<Segment id="140" begin="448482" end="450250" />
+				<Segment id="141" begin="450284" end="451118" />
+				<Segment id="142" begin="451151" end="457591" />
+				<Segment id="143" begin="457624" end="464331" />
+				<Segment id="144" begin="464364" end="468702" />
+				<Segment id="145" begin="468735" end="473407" />
+				<Segment id="146" begin="473440" end="478011" />
+				<Segment id="147" begin="478045" end="481048" />
+				<Segment id="148" begin="481081" end="483717" />
+				<Segment id="149" begin="483750" end="486253" />
+				<Segment id="150" begin="486286" end="487888" />
+				<Segment id="151" begin="487921" end="491058" />
+				<Segment id="152" begin="491091" end="493493" />
+				<Segment id="153" begin="493527" end="497231" />
+				<Segment id="154" begin="497264" end="501335" />
+				<Segment id="155" begin="501368" end="509376" />
+				<Segment id="156" begin="509409" end="523991" />
+				<Segment id="157" begin="524024" end="531999" />
+				<Segment id="158" begin="532032" end="536770" />
+				<Segment id="159" begin="536803" end="546180" />
+				<Segment id="160" begin="546213" end="552653" />
+				<Segment id="161" begin="552686" end="555289" />
+				<Segment id="162" begin="555322" end="566400" />
+				<Segment id="163" begin="566433" end="571972" />
+				<Segment id="164" begin="572005" end="575742" />
+				<Segment id="165" begin="575776" end="579680" />
+				<Segment id="166" begin="579713" end="591959" />
+				<Segment id="167" begin="591992" end="596630" />
+				<Segment id="168" begin="596663" end="601134" />
+				<Segment id="169" begin="601168" end="605138" />
+				<Segment id="170" begin="605172" end="607841" />
+				<Segment id="171" begin="607875" end="610377" />
+				<Segment id="172" begin="610410" end="614982" />
+				<Segment id="173" begin="615015" end="622623" />
+				<Segment id="174" begin="622656" end="625125" />
+				<Segment id="175" begin="625158" end="629897" />
+				<Segment id="176" begin="629930" end="633033" />
+				<Segment id="177" begin="633066" end="639806" />
+				<Segment id="178" begin="639840" end="649550" />
+				<Segment id="179" begin="649583" end="657691" />
+				<Segment id="180" begin="657724" end="661828" />
+				<Segment id="181" begin="661862" end="670604" />
+				<Segment id="182" begin="670637" end="675409" />
+				<Segment id="183" begin="675442" end="679012" />
+				<Segment id="184" begin="679046" end="682716" />
+				<Segment id="185" begin="682749" end="690891" />
+				<Segment id="186" begin="690924" end="706306" />
+				<Segment id="187" begin="706340" end="721054" />
+				<Segment id="188" begin="721088" end="726159" />
+				<Segment id="189" begin="726193" end="731698" />
+				<Segment id="190" begin="731732" end="737437" />
+				<Segment id="191" begin="737471" end="739706" />
+				<Segment id="192" begin="739740" end="741542" />
+				<Segment id="193" begin="741575" end="745245" />
+				<Segment id="194" begin="745279" end="746547" />
+				<Segment id="195" begin="746580" end="750684" />
+				<Segment id="196" begin="750717" end="751118" />
+				<Segment id="197" begin="751151" end="752419" />
+				<Segment id="198" begin="752452" end="755055" />
+				<Segment id="199" begin="755088" end="756690" />
+				<Segment id="200" begin="756723" end="758825" />
+				<Segment id="201" begin="758859" end="759359" />
+				<Segment id="202" begin="759393" end="763764" />
+				<Segment id="203" begin="763797" end="766066" />
+				<Segment id="204" begin="766099" end="768535" />
+				<Segment id="205" begin="768569" end="771972" />
+				<Segment id="206" begin="772005" end="776076" />
+				<Segment id="207" begin="776109" end="778912" />
+				<Segment id="208" begin="778946" end="781248" />
+				<Segment id="209" begin="781281" end="783150" />
+				<Segment id="210" begin="783183" end="786787" />
+				<Segment id="211" begin="786820" end="789056" />
+				<Segment id="212" begin="789089" end="789857" />
+				<Segment id="213" begin="789890" end="792492" />
+				<Segment id="214" begin="792526" end="799366" />
+				<Segment id="215" begin="799399" end="802035" />
+				<Segment id="216" begin="802069" end="806273" />
+				<Segment id="217" begin="806306" end="809810" />
+				<Segment id="218" begin="809843" end="815549" />
+				<Segment id="219" begin="815582" end="817651" />
+				<Segment id="220" begin="817684" end="820888" />
+				<Segment id="221" begin="820921" end="827828" />
+				<Segment id="222" begin="827861" end="834735" />
+				<Segment id="223" begin="834768" end="837004" />
+				<Segment id="224" begin="837037" end="843911" />
+				<Segment id="225" begin="843944" end="855956" />
+				<Segment id="226" begin="855989" end="861361" />
+				<Segment id="227" begin="861395" end="864598" />
+				<Segment id="228" begin="864631" end="867935" />
+				<Segment id="229" begin="867968" end="872105" />
+				<Segment id="230" begin="872139" end="875008" />
+				<Segment id="231" begin="875042" end="877010" />
+				<Segment id="232" begin="877044" end="877945" />
+				<Segment id="233" begin="877978" end="881615" />
+				<Segment id="234" begin="881648" end="884618" />
+				<Segment id="235" begin="884651" end="889189" />
+				<Segment id="236" begin="889223" end="895796" />
+				<Segment id="237" begin="895829" end="901201" />
+				<Segment id="238" begin="901235" end="909076" />
+				<Segment id="239" begin="909109" end="913514" />
+				<Segment id="240" begin="913547" end="933767" />
+				<Segment id="241" begin="933800" end="941408" />
+				<Segment id="242" begin="941441" end="950450" />
+				<Segment id="243" begin="950484" end="952986" />
+				<Segment id="244" begin="953020" end="955522" />
+				<Segment id="245" begin="955556" end="966967" />
+				<Segment id="246" begin="967000" end="969469" />
+				<Segment id="247" begin="969503" end="971538" />
+				<Segment id="248" begin="971572" end="973106" />
+				<Segment id="249" begin="973140" end="980881" />
+				<Segment id="250" begin="980914" end="983517" />
+				<Segment id="251" begin="983550" end="987855" />
+				<Segment id="252" begin="987888" end="993026" />
+				<Segment id="253" begin="993060" end="996029" />
+				<Segment id="254" begin="996063" end="998866" />
+				<Segment id="255" begin="998899" end="1002436" />
+				<Segment id="256" begin="1002469" end="1005105" />
+				<Segment id="257" begin="1005138" end="1007341" />
+				<Segment id="258" begin="1007374" end="1008709" />
+				<Segment id="259" begin="1008742" end="1017951" />
+				<Segment id="260" begin="1017985" end="1021622" />
+				<Segment id="261" begin="1021655" end="1032232" />
+				<Segment id="262" begin="1032266" end="1039006" />
+				<Segment id="263" begin="1039039" end="1048415" />
+				<Segment id="264" begin="1048448" end="1055622" />
+				<Segment id="265" begin="1055656" end="1059459" />
+				<Segment id="266" begin="1059493" end="1061428" />
+				<Segment id="267" begin="1061461" end="1065165" />
+				<Segment id="268" begin="1065199" end="1067434" />
+				<Segment id="269" begin="1067467" end="1071939" />
+				<Segment id="270" begin="1071972" end="1078745" />
+				<Segment id="271" begin="1078779" end="1084818" />
+				<Segment id="272" begin="1084852" end="1090591" />
+				<Segment id="273" begin="1090624" end="1094094" />
+				<Segment id="274" begin="1094127" end="1100634" />
+				<Segment id="275" begin="1100667" end="1107374" />
+				<Segment id="276" begin="1107407" end="1113647" />
+				<Segment id="277" begin="1113680" end="1117351" />
+				<Segment id="278" begin="1117384" end="1121021" />
+				<Segment id="279" begin="1121054" end="1125425" />
+				<Segment id="280" begin="1125459" end="1130230" />
+				<Segment id="281" begin="1130264" end="1133233" />
+				<Segment id="282" begin="1133267" end="1135936" />
+				<Segment id="283" begin="1135969" end="1142576" />
+				<Segment id="284" begin="1142609" end="1158859" />
+				<Segment id="285" begin="1158892" end="1161395" />
+				<Segment id="286" begin="1161428" end="1168168" />
+				<Segment id="287" begin="1168202" end="1171805" />
+				<Segment id="288" begin="1171839" end="1178445" />
+				<Segment id="289" begin="1178478" end="1194394" />
+				<Segment id="290" begin="1194428" end="1201335" />
+				<Segment id="291" begin="1201368" end="1209343" />
+				<Segment id="292" begin="1209376" end="1216683" />
+				<Segment id="293" begin="1216717" end="1230531" />
+				<Segment id="294" begin="1230564" end="1240407" />
+				<Segment id="295" begin="1240440" end="1242776" />
+				<Segment id="296" begin="1242809" end="1245712" />
+				<Segment id="297" begin="1245746" end="1252786" />
+				<Segment id="298" begin="1252819" end="1255355" />
+				<Segment id="299" begin="1255389" end="1266233" />
+				<Segment id="300" begin="1266266" end="1268669" />
+				<Segment id="301" begin="1268702" end="1269069" />
+				<Segment id="302" begin="1269102" end="1269970" />
+				<Segment id="303" begin="1270003" end="1272206" />
+				<Segment id="304" begin="1272239" end="1276076" />
+				<Segment id="305" begin="1276109" end="1279980" />
+				<Segment id="306" begin="1280013" end="1295963" />
+				<Segment id="307" begin="1295996" end="1300033" />
+				<Segment id="308" begin="1300067" end="1301468" />
+				<Segment id="309" begin="1301502" end="1304204" />
+				<Segment id="310" begin="1304238" end="1306206" />
+				<Segment id="311" begin="1306240" end="1308876" />
+				<Segment id="312" begin="1308909" end="1313981" />
+				<Segment id="313" begin="1314014" end="1321989" />
+				<Segment id="314" begin="1322022" end="1325225" />
+				<Segment id="315" begin="1325259" end="1330030" />
+				<Segment id="316" begin="1330063" end="1338038" />
+				<Segment id="317" begin="1338071" end="1341241" />
+				<Segment id="318" begin="1341275" end="1343911" />
+				<Segment id="319" begin="1343944" end="1355222" />
+				<Segment id="320" begin="1355255" end="1358058" />
+				<Segment id="321" begin="1358091" end="1359927" />
+				<Segment id="322" begin="1359960" end="1362996" />
+				<Segment id="323" begin="1363030" end="1363964" />
+				<Segment id="324" begin="1363997" end="1366366" />
+				<Segment id="325" begin="1366400" end="1367568" />
+				<Segment id="326" begin="1367601" end="1369369" />
+				<Segment id="327" begin="1369403" end="1370304" />
+				<Segment id="328" begin="1370337" end="1370771" />
+				<Segment id="329" begin="1370804" end="1374508" />
+				<Segment id="330" begin="1374541" end="1376743" />
+				<Segment id="331" begin="1376777" end="1379179" />
+				<Segment id="332" begin="1379213" end="1385853" />
+				<Segment id="333" begin="1385886" end="1389156" />
+				<Segment id="334" begin="1389189" end="1392593" />
+				<Segment id="335" begin="1392626" end="1400267" />
+				<Segment id="336" begin="1400300" end="1407341" />
+				<Segment id="337" begin="1407374" end="1411945" />
+				<Segment id="338" begin="1411979" end="1418552" />
+				<Segment id="339" begin="1418585" end="1424191" />
+				<Segment id="340" begin="1424224" end="1433700" />
+				<Segment id="341" begin="1433734" end="1434468" />
+				<Segment id="342" begin="1434501" end="1438138" />
+				<Segment id="343" begin="1438172" end="1445379" />
+				<Segment id="344" begin="1445412" end="1448415" />
+				<Segment id="345" begin="1448448" end="1451585" />
+				<Segment id="346" begin="1451618" end="1456890" />
+				<Segment id="347" begin="1456924" end="1459326" />
+				<Segment id="348" begin="1459359" end="1464665" />
+				<Segment id="349" begin="1464698" end="1468268" />
+				<Segment id="350" begin="1468302" end="1473774" />
+				<Segment id="351" begin="1473807" end="1474408" />
+				<Segment id="352" begin="1474441" end="1479179" />
+				<Segment id="353" begin="1479213" end="1482049" />
+				<Segment id="354" begin="1482082" end="1485485" />
+				<Segment id="355" begin="1485519" end="1491959" />
+				<Segment id="356" begin="1491992" end="1496029" />
+				<Segment id="357" begin="1496063" end="1500801" />
+				<Segment id="358" begin="1500834" end="1503837" />
+				<Segment id="359" begin="1503871" end="1509810" />
+				<Segment id="360" begin="1509843" end="1515883" />
+				<Segment id="361" begin="1515916" end="1517818" />
+				<Segment id="362" begin="1517851" end="1518952" />
+				<Segment id="363" begin="1518986" end="1519786" />
+				<Segment id="364" begin="1519820" end="1523590" />
+				<Segment id="365" begin="1523624" end="1524892" />
+				<Segment id="366" begin="1524925" end="1527628" />
+				<Segment id="367" begin="1527661" end="1530797" />
+				<Segment id="368" begin="1530831" end="1532799" />
+				<Segment id="369" begin="1532833" end="1534801" />
+				<Segment id="370" begin="1534835" end="1537104" />
+				<Segment id="371" begin="1537137" end="1541642" />
+				<Segment id="372" begin="1541675" end="1548916" />
+				<Segment id="373" begin="1548949" end="1563630" />
+				<Segment id="374" begin="1563664" end="1565832" />
+				<Segment id="375" begin="1565866" end="1567901" />
+				<Segment id="376" begin="1567935" end="1591892" />
+				<Segment id="377" begin="1591925" end="1594027" />
+				<Segment id="378" begin="1594061" end="1596597" />
+				<Segment id="379" begin="1596630" end="1601301" />
+				<Segment id="380" begin="1601335" end="1602903" />
+				<Segment id="381" begin="1602936" end="1605772" />
+				<Segment id="382" begin="1605806" end="1612813" />
+				<Segment id="383" begin="1612846" end="1624124" />
+				<Segment id="384" begin="1624157" end="1629229" />
+				<Segment id="385" begin="1629263" end="1633767" />
+				<Segment id="386" begin="1633800" end="1636770" />
+				<Segment id="387" begin="1636803" end="1646313" />
+				<Segment id="388" begin="1646346" end="1650150" />
+				<Segment id="389" begin="1650184" end="1656089" />
+				<Segment id="390" begin="1656123" end="1659960" />
+				<Segment id="391" begin="1659993" end="1668435" />
+				<Segment id="392" begin="1668468" end="1695095" />
+				<Segment id="393" begin="1695128" end="1699066" />
+				<Segment id="394" begin="1699099" end="1703170" />
+				<Segment id="395" begin="1703203" end="1706240" />
+				<Segment id="396" begin="1706273" end="1717084" />
+				<Segment id="397" begin="1717117" end="1723390" />
+				<Segment id="398" begin="1723423" end="1725526" />
+				<Segment id="399" begin="1725559" end="1726627" />
+				<Segment id="400" begin="1726660" end="1727294" />
+				<Segment id="401" begin="1727327" end="1730697" />
+				<Segment id="402" begin="1730731" end="1736637" />
+				<Segment id="403" begin="1736670" end="1741508" />
+				<Segment id="404" begin="1741542" end="1744678" />
+				<Segment id="405" begin="1744711" end="1752920" />
+				<Segment id="406" begin="1752953" end="1760427" />
+				<Segment id="407" begin="1760460" end="1777344" />
+				<Segment id="408" begin="1777377" end="1777978" />
+				<Segment id="409" begin="1778011" end="1778612" />
+				<Segment id="410" begin="1778645" end="1781448" />
+				<Segment id="411" begin="1781481" end="1781949" />
+				<Segment id="412" begin="1781982" end="1782316" />
+				<Segment id="413" begin="1782349" end="1782749" />
+				<Segment id="414" begin="1782783" end="1784618" />
+				<Segment id="415" begin="1784651" end="1788555" />
+				<Segment id="416" begin="1788589" end="1789056" />
+				<Segment id="417" begin="1789089" end="1790123" />
+				<Segment id="418" begin="1790157" end="1794761" />
+				<Segment id="419" begin="1794795" end="1800367" />
+				<Segment id="420" begin="1800400" end="1803003" />
+				<Segment id="421" begin="1803036" end="1805439" />
+				<Segment id="422" begin="1805472" end="1815015" />
+				<Segment id="423" begin="1815048" end="1827528" />
+				<Segment id="424" begin="1827561" end="1849049" />
+				<Segment id="425" begin="1849082" end="1852619" />
+				<Segment id="426" begin="1852653" end="1858258" />
+				<Segment id="427" begin="1858292" end="1865732" />
+				<Segment id="428" begin="1865766" end="1876643" />
+				<Segment id="429" begin="1876677" end="1878378" />
+				<Segment id="430" begin="1878412" end="1887187" />
+				<Segment id="431" begin="1887221" end="1891658" />
+				<Segment id="432" begin="1891692" end="1895629" />
+				<Segment id="433" begin="1895662" end="1901635" />
+				<Segment id="434" begin="1901668" end="1911979" />
+				<Segment id="435" begin="1912012" end="1914781" />
+				<Segment id="436" begin="1914815" end="1919486" />
+				<Segment id="437" begin="1919520" end="1922389" />
+				<Segment id="438" begin="1922422" end="1926026" />
+				<Segment id="439" begin="1926059" end="1930497" />
+				<Segment id="440" begin="1930531" end="1935402" />
+				<Segment id="441" begin="1935435" end="1938639" />
+				<Segment id="442" begin="1938672" end="1943544" />
+				<Segment id="443" begin="1943577" end="1945846" />
+				<Segment id="444" begin="1945879" end="1947514" />
+				<Segment id="445" begin="1947548" end="1948115" />
+				<Segment id="446" begin="1948148" end="1952085" />
+				<Segment id="447" begin="1952119" end="1953287" />
+				<Segment id="448" begin="1953320" end="1956356" />
+				<Segment id="449" begin="1956390" end="1960527" />
+				<Segment id="450" begin="1960561" end="1960961" />
+				<Segment id="451" begin="1960994" end="1961428" />
+				<Segment id="452" begin="1961461" end="1964198" />
+				<Segment id="453" begin="1964231" end="1972973" />
+				<Segment id="454" begin="1973006" end="1979513" />
+				<Segment id="455" begin="1979546" end="1983517" />
+				<Segment id="456" begin="1983550" end="1989323" />
+				<Segment id="457" begin="1989356" end="1993594" />
+				<Segment id="458" begin="1993627" end="1996396" />
+				<Segment id="459" begin="1996430" end="2005873" />
+				<Segment id="460" begin="2005906" end="2010310" />
+				<Segment id="461" begin="2010344" end="2013947" />
+				<Segment id="462" begin="2013981" end="2022589" />
+				<Segment id="463" begin="2022623" end="2025659" />
+				<Segment id="464" begin="2025692" end="2032432" />
+				<Segment id="465" begin="2032466" end="2041508" />
+				<Segment id="466" begin="2041542" end="2046113" />
+				<Segment id="467" begin="2046146" end="2049149" />
+				<Segment id="468" begin="2049183" end="2057491" />
+				<Segment id="469" begin="2057524" end="2062029" />
+				<Segment id="470" begin="2062062" end="2063063" />
+				<Segment id="471" begin="2063096" end="2073774" />
+				<Segment id="472" begin="2073807" end="2101068" />
+				<Segment id="473" begin="2101101" end="2110611" />
+				<Segment id="474" begin="2110644" end="2113981" />
+				<Segment id="475" begin="2114014" end="2116416" />
+				<Segment id="476" begin="2116450" end="2122189" />
+				<Segment id="477" begin="2122222" end="2128695" />
+				<Segment id="478" begin="2128729" end="2131031" />
+				<Segment id="479" begin="2131064" end="2135702" />
+				<Segment id="480" begin="2135736" end="2139373" />
+				<Segment id="481" begin="2139406" end="2140207" />
+				<Segment id="482" begin="2140240" end="2140807" />
+				<Segment id="483" begin="2140841" end="2141942" />
+				<Segment id="484" begin="2141975" end="2144311" />
+				<Segment id="485" begin="2144344" end="2147181" />
+				<Segment id="486" begin="2147214" end="2149483" />
+				<Segment id="487" begin="2149516" end="2156323" />
+				<Segment id="488" begin="2156356" end="2156857" />
+				<Segment id="489" begin="2156890" end="2160327" />
+				<Segment id="490" begin="2160360" end="2162196" />
+				<Segment id="491" begin="2162229" end="2165132" />
+				<Segment id="492" begin="2165165" end="2168735" />
+				<Segment id="493" begin="2168769" end="2171705" />
+				<Segment id="494" begin="2171738" end="2173273" />
+				<Segment id="495" begin="2173307" end="2176877" />
+				<Segment id="496" begin="2176910" end="2180848" />
+				<Segment id="497" begin="2180881" end="2185419" />
+				<Segment id="498" begin="2185452" end="2191225" />
+				<Segment id="499" begin="2191258" end="2198332" />
+				<Segment id="500" begin="2198365" end="2202669" />
+				<Segment id="501" begin="2202703" end="2204705" />
+				<Segment id="502" begin="2204738" end="2211078" />
+				<Segment id="503" begin="2211111" end="2216049" />
+				<Segment id="504" begin="2216083" end="2218585" />
+				<Segment id="505" begin="2218619" end="2221822" />
+				<Segment id="506" begin="2221855" end="2224791" />
+				<Segment id="507" begin="2224825" end="2227094" />
+				<Segment id="508" begin="2227127" end="2229596" />
+				<Segment id="509" begin="2229630" end="2241608" />
+				<Segment id="510" begin="2241642" end="2247614" />
+				<Segment id="511" begin="2247648" end="2251919" />
+				<Segment id="512" begin="2251952" end="2264798" />
+				<Segment id="513" begin="2264831" end="2269536" />
+				<Segment id="514" begin="2269570" end="2273207" />
+				<Segment id="515" begin="2273240" end="2283050" />
+				<Segment id="516" begin="2283083" end="2285953" />
+				<Segment id="517" begin="2285986" end="2291425" />
+				<Segment id="518" begin="2291458" end="2304404" />
+				<Segment id="519" begin="2304438" end="2308141" />
+				<Segment id="520" begin="2308175" end="2311278" />
+				<Segment id="521" begin="2311311" end="2313780" />
+				<Segment id="522" begin="2313814" end="2318318" />
+				<Segment id="523" begin="2318352" end="2333934" />
+				<Segment id="524" begin="2333967" end="2338372" />
+				<Segment id="525" begin="2338405" end="2342042" />
+				<Segment id="526" begin="2342075" end="2345646" />
+				<Segment id="527" begin="2345679" end="2363830" />
+				<Segment id="528" begin="2363864" end="2369169" />
+				<Segment id="529" begin="2369203" end="2372239" />
+				<Segment id="530" begin="2372272" end="2376844" />
+				<Segment id="531" begin="2376877" end="2380013" />
+				<Segment id="532" begin="2380047" end="2393360" />
+				<Segment id="533" begin="2393393" end="2396697" />
+				<Segment id="534" begin="2396730" end="2401435" />
+				<Segment id="535" begin="2401468" end="2405472" />
+				<Segment id="536" begin="2405506" end="2410277" />
+				<Segment id="537" begin="2410310" end="2412179" />
+				<Segment id="538" begin="2412212" end="2417417" />
+				<Segment id="539" begin="2417451" end="2421221" />
+				<Segment id="540" begin="2421255" end="2424424" />
+				<Segment id="541" begin="2424458" end="2428762" />
+				<Segment id="542" begin="2428795" end="2435102" />
+				<Segment id="543" begin="2435135" end="2444578" />
+				<Segment id="544" begin="2444611" end="2449683" />
+				<Segment id="545" begin="2449716" end="2453854" />
+				<Segment id="546" begin="2453887" end="2456390" />
+				<Segment id="547" begin="2456423" end="2458859" />
+				<Segment id="548" begin="2458892" end="2460627" />
+				<Segment id="549" begin="2460661" end="2466366" />
+				<Segment id="550" begin="2466400" end="2467134" />
+				<Segment id="551" begin="2467167" end="2468902" />
+				<Segment id="552" begin="2468936" end="2472472" />
+				<Segment id="553" begin="2472506" end="2475609" />
+				<Segment id="554" begin="2475642" end="2486620" />
+				<Segment id="555" begin="2486653" end="2491191" />
+				<Segment id="556" begin="2491225" end="2495896" />
+				<Segment id="557" begin="2495929" end="2508642" />
+				<Segment id="558" begin="2508675" end="2512212" />
+				<Segment id="559" begin="2512246" end="2520954" />
+				<Segment id="560" begin="2520988" end="2527794" />
+				<Segment id="561" begin="2527828" end="2532332" />
+				<Segment id="562" begin="2532366" end="2535769" />
+				<Segment id="563" begin="2535802" end="2536203" />
+				<Segment id="564" begin="2536236" end="2539840" />
+				<Segment id="565" begin="2539873" end="2544011" />
+				<Segment id="566" begin="2544044" end="2555656" />
+				<Segment id="567" begin="2555689" end="2561795" />
+				<Segment id="568" begin="2561828" end="2567935" />
+				<Segment id="569" begin="2567968" end="2581915" />
+				<Segment id="570" begin="2581949" end="2588355" />
+				<Segment id="571" begin="2588388" end="2607074" />
+				<Segment id="572" begin="2607107" end="2611378" />
+				<Segment id="573" begin="2611411" end="2626393" />
+				<Segment id="574" begin="2626426" end="2633500" />
+				<Segment id="575" begin="2633534" end="2638205" />
+				<Segment id="576" begin="2638238" end="2651652" />
+				<Segment id="577" begin="2651685" end="2657191" />
+				<Segment id="578" begin="2657224" end="2661361" />
+				<Segment id="579" begin="2661395" end="2668936" />
+				<Segment id="580" begin="2668969" end="2680881" />
+				<Segment id="581" begin="2680914" end="2683016" />
+				<Segment id="582" begin="2683050" end="2685752" />
+				<Segment id="583" begin="2685786" end="2690324" />
+				<Segment id="584" begin="2690357" end="2698165" />
+				<Segment id="585" begin="2698198" end="2705906" />
+				<Segment id="586" begin="2705939" end="2719953" />
+				<Segment id="587" begin="2719987" end="2730998" />
+				<Segment id="588" begin="2731031" end="2739239" />
+				<Segment id="589" begin="2739273" end="2743110" />
+				<Segment id="590" begin="2743143" end="2748515" />
+				<Segment id="591" begin="2748549" end="2752452" />
+				<Segment id="592" begin="2752486" end="2761161" />
+				<Segment id="593" begin="2761195" end="2766900" />
+				<Segment id="594" begin="2766934" end="2780480" />
+				<Segment id="595" begin="2780514" end="2786019" />
+				<Segment id="596" begin="2786053" end="2794228" />
+				<Segment id="597" begin="2794261" end="2797664" />
+				<Segment id="598" begin="2797698" end="2800934" />
+				<Segment id="599" begin="2800968" end="2810744" />
+				<Segment id="600" begin="2810777" end="2816116" />
+				<Segment id="601" begin="2816149" end="2824958" />
+				<Segment id="602" begin="2824992" end="2831298" />
+				<Segment id="603" begin="2831331" end="2837171" />
+				<Segment id="604" begin="2837204" end="2845345" />
+				<Segment id="605" begin="2845379" end="2854588" />
+				<Segment id="606" begin="2854621" end="2860427" />
+				<Segment id="607" begin="2860460" end="2870737" />
+				<Segment id="608" begin="2870771" end="2874608" />
+				<Segment id="609" begin="2874641" end="2876410" />
+				<Segment id="610" begin="2876443" end="2878912" />
+				<Segment id="611" begin="2878946" end="2880414" />
+				<Segment id="612" begin="2880447" end="2881982" />
+				<Segment id="613" begin="2882015" end="2883717" />
+				<Segment id="614" begin="2883750" end="2886453" />
+				<Segment id="615" begin="2886486" end="2893026" />
+				<Segment id="616" begin="2893060" end="2896930" />
+				<Segment id="617" begin="2896964" end="2899733" />
+				<Segment id="618" begin="2899766" end="2903904" />
+				<Segment id="619" begin="2903937" end="2906874" />
+				<Segment id="620" begin="2906907" end="2914181" />
+				<Segment id="621" begin="2914214" end="2917217" />
+				<Segment id="622" begin="2917251" end="2919686" />
+				<Segment id="623" begin="2919720" end="2923290" />
+				<Segment id="624" begin="2923323" end="2926727" />
+				<Segment id="625" begin="2926760" end="2930531" />
+				<Segment id="626" begin="2930564" end="2936603" />
+				<Segment id="627" begin="2936637" end="2940207" />
+				<Segment id="628" begin="2940240" end="2941341" />
+				<Segment id="629" begin="2941375" end="2945412" />
+				<Segment id="630" begin="2945445" end="2947381" />
+				<Segment id="631" begin="2947414" end="2952019" />
+				<Segment id="632" begin="2952052" end="2958091" />
+				<Segment id="633" begin="2958125" end="2966500" />
+				<Segment id="634" begin="2966533" end="2967467" />
+				<Segment id="635" begin="2967501" end="2967901" />
+				<Segment id="636" begin="2967935" end="2969136" />
+				<Segment id="637" begin="2969169" end="2972639" />
+				<Segment id="638" begin="2972673" end="2979613" />
+				<Segment id="639" begin="2979646" end="2981982" />
+				<Segment id="640" begin="2982015" end="2984918" />
+				<Segment id="641" begin="2984952" end="2986653" />
+				<Segment id="642" begin="2986687" end="2988555" />
+				<Segment id="643" begin="2988589" end="2989957" />
+				<Segment id="644" begin="2989990" end="2996864" />
+				<Segment id="645" begin="2996897" end="2997397" />
+				<Segment id="646" begin="2997431" end="3009776" />
+				<Segment id="647" begin="3009810" end="3011578" />
+				<Segment id="648" begin="3011612" end="3014081" />
+				<Segment id="649" begin="3014114" end="3020921" />
+				<Segment id="650" begin="3020954" end="3085485" />
+				<Segment id="651" begin="3085519" end="3085953" />
+				<Segment id="652" begin="3085986" end="3094862" />
+				<Segment id="653" begin="3094895" end="3100234" />
+				<Segment id="654" begin="3100267" end="3107274" />
+				<Segment id="655" begin="3107307" end="3125058" />
+				<Segment id="656" begin="3125092" end="3126860" />
+				<Segment id="657" begin="3126894" end="3129363" />
+				<Segment id="658" begin="3129396" end="3136203" />
+				<Segment id="659" begin="3136236" end="3147748" />
+				<Segment id="660" begin="3147781" end="3148482" />
+				<Segment id="661" begin="3148515" end="3148982" />
+				<Segment id="662" begin="3149016" end="3150150" />
+				<Segment id="663" begin="3150184" end="3151818" />
+				<Segment id="664" begin="3151852" end="3152920" />
+				<Segment id="665" begin="3152953" end="3155389" />
+				<Segment id="666" begin="3155422" end="3155756" />
+				<Segment id="667" begin="3155789" end="3158425" />
+				<Segment id="668" begin="3158458" end="3160160" />
+				<Segment id="669" begin="3160194" end="3162863" />
+				<Segment id="670" begin="3162896" end="3164164" />
+				<Segment id="671" begin="3164198" end="3165532" />
+				<Segment id="672" begin="3165566" end="3167067" />
+				<Segment id="673" begin="3167100" end="3170904" />
+				<Segment id="674" begin="3170938" end="3173574" />
+				<Segment id="675" begin="3173607" end="3174908" />
+				<Segment id="676" begin="3174942" end="3176310" />
+				<Segment id="677" begin="3176343" end="3177978" />
+				<Segment id="678" begin="3178011" end="3179813" />
+				<Segment id="679" begin="3179847" end="3180681" />
+				<Segment id="680" begin="3180714" end="3181515" />
+				<Segment id="681" begin="3181548" end="3183183" />
+				<Segment id="682" begin="3183217" end="3185886" />
+				<Segment id="683" begin="3185919" end="3188088" />
+				<Segment id="684" begin="3188121" end="3188589" />
+				<Segment id="685" begin="3188622" end="3190424" />
+				<Segment id="686" begin="3190457" end="3191225" />
+				<Segment id="687" begin="3191258" end="3193694" />
+				<Segment id="688" begin="3193727" end="3195028" />
+				<Segment id="689" begin="3195062" end="3197664" />
+				<Segment id="690" begin="3197698" end="3199566" />
+				<Segment id="691" begin="3199600" end="3200701" />
+				<Segment id="692" begin="3200734" end="3201969" />
+				<Segment id="693" begin="3202002" end="3202936" />
+				<Segment id="694" begin="3202970" end="3211845" />
+				<Segment id="695" begin="3211879" end="3217217" />
+				<Segment id="696" begin="3217251" end="3233000" />
+			</Group>
+		</StratumEx>
+		<StratumEx name="TRANSCRIPT" />
+		<StratumEx name="VISUAL_CONTENT" />
+		<StratumEx name="RESTRICTION_AUDIO_DESCRIPTION" />
+		<StratumEx name="RESTRICTION_AUDIO" />
+		<StratumEx name="QUALITY_CONTROL" />
+		<StratumEx name="LOGGING" />
+		<StratumEx name="VIDEO_EDLO" />
+		<EssencePackages>
+			<EssencePackage>
+				<EPGuid>ff0fcfe9-c385-4a3d-85f9-17975d693e93</EPGuid>
+				<Title>Main</Title>
+				<Classification>0</Classification>
+				<Representative>true</Representative>
+				<SOC />
+				<EOC />
+			</EssencePackage>
+		</EssencePackages>
+	</MAObject>
+	<MVAttribute type="OWNER" index="0" attribute="OWNER"
+		mdclass="VIDEO" objectid="V_110534NG_I0">
+		<Meta name="OWNER" format="string" frate="">NGT</Meta>
+	</MVAttribute>
+	<MVAttribute type="FLAVOURINFORMATION" index="0"
+		attribute="FLAVOURINFORMATION" mdclass="VIDEO" objectid="V_110534NG_I0">
+		<Meta name="FTCINFRAME" format="string" frate="" />
+		<Meta name="GRIDPOSITION" format="string" frate="" />
+		<Meta name="FTCOUTFRAME" format="string" frate="" />
+		<Meta name="IMAGEID" format="string" frate="">0</Meta>
+		<Meta name="VIDRES" format="string" frate="" />
+		<Meta name="LENGTH" format="string" frate="" />
+		<Meta name="CREATEDATE" format="string" frate="" />
+		<Meta name="LASTDATEREMOVED" format="string" frate="" />
+		<Meta name="FILELOCATION" format="string" frate="" />
+		<Meta name="WEBROOT" format="string" frate="" />
+		<Meta name="DIMAGE" format="string" frate="" />
+		<Meta name="ASPECTRATIO" format="string" frate="" />
+		<Meta name="FILEPATH" format="string" frate="">M:\HIGHRES\ESSENCE\110534NG\
+		</Meta>
+		<Meta name="FDATE" format="string" frate="" />
+		<Meta name="FORMAT" format="string" frate="">DVCPROHD</Meta>
+		<Meta name="FPS" format="string" frate="" />
+		<Meta name="FILENAME" format="string" frate="">110534NG_0_42_1.MOV
+		</Meta>
+		<Meta name="ESSENCE_CHANGED" format="string" frate="">0</Meta>
+		<Meta name="BITRATE" format="string" frate="" />
+		<Meta name="DRATE" format="string" frate="" />
+		<Meta name="FTCIN" format="string" frate="">00:59:38:15</Meta>
+		<Meta name="RESOLUTION" format="string" frate="" />
+		<Meta name="LASTDATEACCESSED" format="string" frate="" />
+		<Meta name="FSIZE" format="string" frate="" />
+		<Meta name="DURATION" format="string" frate="">00:53:53:00</Meta>
+		<Meta name="USAGETYPE" format="string" frate="" />
+		<Meta name="USAGE" format="string" frate="">EDIT</Meta>
+		<Meta name="DWEB" format="string" frate="" />
+		<Meta name="USERSAVED" format="string" frate="" />
+		<Meta name="FTCOUT" format="string" frate="">01:53:31:15</Meta>
+		<Meta name="ANUM" format="string" frate="" />
+		<Meta name="USECOUNT" format="string" frate="" />
+		<Meta name="LASTDATERESTORED" format="string" frate="" />
+		<Meta name="EMGUID" format="string" frate="" />
+		<Meta name="GRIDNUM" format="string" frate="" />
+		<Meta name="BACKUPTAPENUM" format="string" frate="" />
+		<Meta name="STANDARD" format="string" frate="" />
+		<Meta name="FILEUSAGE" format="string" frate="" />
+		<Meta name="HACSTATUS" format="string" frate="" />
+	</MVAttribute>
+	<MVAttribute type="FLAVOURINFORMATION" index="1"
+		attribute="FLAVOURINFORMATION" mdclass="VIDEO" objectid="V_110534NG_I0">
+		<Meta name="FTCINFRAME" format="string" frate="" />
+		<Meta name="GRIDPOSITION" format="string" frate="" />
+		<Meta name="FTCOUTFRAME" format="string" frate="" />
+		<Meta name="IMAGEID" format="string" frate="">0</Meta>
+		<Meta name="VIDRES" format="string" frate="" />
+		<Meta name="LENGTH" format="string" frate="" />
+		<Meta name="CREATEDATE" format="string" frate="" />
+		<Meta name="LASTDATEREMOVED" format="string" frate="" />
+		<Meta name="FILELOCATION" format="string" frate="" />
+		<Meta name="WEBROOT" format="string" frate="" />
+		<Meta name="DIMAGE" format="string" frate="" />
+		<Meta name="ASPECTRATIO" format="string" frate="" />
+		<Meta name="FILEPATH" format="string" frate="">M:\MIDRES\ESSENCE\110534NG\
+		</Meta>
+		<Meta name="FDATE" format="string" frate="" />
+		<Meta name="FORMAT" format="string" frate="">PROPROXY</Meta>
+		<Meta name="FPS" format="string" frate="" />
+		<Meta name="FILENAME" format="string" frate="">110534NG_0_46_1.MOV
+		</Meta>
+		<Meta name="ESSENCE_CHANGED" format="string" frate="">0</Meta>
+		<Meta name="BITRATE" format="string" frate="" />
+		<Meta name="DRATE" format="string" frate="" />
+		<Meta name="FTCIN" format="string" frate="">00:59:38:15</Meta>
+		<Meta name="RESOLUTION" format="string" frate="" />
+		<Meta name="LASTDATEACCESSED" format="string" frate="" />
+		<Meta name="FSIZE" format="string" frate="" />
+		<Meta name="DURATION" format="string" frate="">00:53:53:00</Meta>
+		<Meta name="USAGETYPE" format="string" frate="" />
+		<Meta name="USAGE" format="string" frate="">ANY</Meta>
+		<Meta name="DWEB" format="string" frate="" />
+		<Meta name="USERSAVED" format="string" frate="" />
+		<Meta name="FTCOUT" format="string" frate="">01:53:31:14</Meta>
+		<Meta name="ANUM" format="string" frate="" />
+		<Meta name="USECOUNT" format="string" frate="" />
+		<Meta name="LASTDATERESTORED" format="string" frate="" />
+		<Meta name="EMGUID" format="string" frate="" />
+		<Meta name="GRIDNUM" format="string" frate="" />
+		<Meta name="BACKUPTAPENUM" format="string" frate="" />
+		<Meta name="STANDARD" format="string" frate="" />
+		<Meta name="FILEUSAGE" format="string" frate="" />
+		<Meta name="HACSTATUS" format="string" frate="" />
+	</MVAttribute>
+	<MVAttribute type="FLAVOURINFORMATION" index="2"
+		attribute="FLAVOURINFORMATION" mdclass="VIDEO" objectid="V_110534NG_I0">
+		<Meta name="FTCINFRAME" format="string" frate="" />
+		<Meta name="GRIDPOSITION" format="string" frate="" />
+		<Meta name="FTCOUTFRAME" format="string" frate="" />
+		<Meta name="IMAGEID" format="string" frate="">0</Meta>
+		<Meta name="VIDRES" format="string" frate="" />
+		<Meta name="LENGTH" format="string" frate="" />
+		<Meta name="CREATEDATE" format="string" frate="" />
+		<Meta name="LASTDATEREMOVED" format="string" frate="" />
+		<Meta name="FILELOCATION" format="string" frate="" />
+		<Meta name="WEBROOT" format="string" frate="" />
+		<Meta name="DIMAGE" format="string" frate="" />
+		<Meta name="ASPECTRATIO" format="string" frate="" />
+		<Meta name="FILEPATH" format="string" frate="">M:\HIGHRES\MEDIAARCHIVE\CARRIER\LOWRES\110534NG\
+		</Meta>
+		<Meta name="FDATE" format="string" frate="" />
+		<Meta name="FORMAT" format="string" frate="">H264</Meta>
+		<Meta name="FPS" format="string" frate="" />
+		<Meta name="FILENAME" format="string" frate="">110534NG_0_47_1.MOV
+		</Meta>
+		<Meta name="ESSENCE_CHANGED" format="string" frate="">1</Meta>
+		<Meta name="BITRATE" format="string" frate="" />
+		<Meta name="DRATE" format="string" frate="" />
+		<Meta name="FTCIN" format="string" frate="">00:59:38:15</Meta>
+		<Meta name="RESOLUTION" format="string" frate="" />
+		<Meta name="LASTDATEACCESSED" format="string" frate="" />
+		<Meta name="FSIZE" format="string" frate="" />
+		<Meta name="DURATION" format="string" frate="">00:53:53:00</Meta>
+		<Meta name="USAGETYPE" format="string" frate="" />
+		<Meta name="USAGE" format="string" frate="">BROWSE</Meta>
+		<Meta name="DWEB" format="string" frate="" />
+		<Meta name="USERSAVED" format="string" frate="" />
+		<Meta name="FTCOUT" format="string" frate="">01:53:31:15</Meta>
+		<Meta name="ANUM" format="string" frate="" />
+		<Meta name="USECOUNT" format="string" frate="" />
+		<Meta name="LASTDATERESTORED" format="string" frate="" />
+		<Meta name="EMGUID" format="string" frate="" />
+		<Meta name="GRIDNUM" format="string" frate="" />
+		<Meta name="BACKUPTAPENUM" format="string" frate="" />
+		<Meta name="STANDARD" format="string" frate="" />
+		<Meta name="FILEUSAGE" format="string" frate="" />
+		<Meta name="HACSTATUS" format="string" frate="" />
+	</MVAttribute>
+	<MVAttribute type="FLAVOURINFORMATION" index="3"
+		attribute="FLAVOURINFORMATION" mdclass="VIDEO" objectid="V_110534NG_I0">
+		<Meta name="FTCINFRAME" format="string" frate="" />
+		<Meta name="GRIDPOSITION" format="string" frate="" />
+		<Meta name="FTCOUTFRAME" format="string" frate="" />
+		<Meta name="IMAGEID" format="string" frate="" />
+		<Meta name="VIDRES" format="string" frate="" />
+		<Meta name="LENGTH" format="string" frate="" />
+		<Meta name="CREATEDATE" format="string" frate="" />
+		<Meta name="LASTDATEREMOVED" format="string" frate="" />
+		<Meta name="FILELOCATION" format="string" frate="" />
+		<Meta name="WEBROOT" format="string" frate="" />
+		<Meta name="DIMAGE" format="string" frate="" />
+		<Meta name="ASPECTRATIO" format="string" frate="" />
+		<Meta name="FILEPATH" format="string" frate="">M:\HIGHRES\MEDIAARCHIVE\CARRIER\LOWRES\110534NG
+		</Meta>
+		<Meta name="FDATE" format="string" frate="" />
+		<Meta name="FORMAT" format="string" frate="">JPEG</Meta>
+		<Meta name="FPS" format="string" frate="" />
+		<Meta name="FILENAME" format="string" frate="">110534NG_0_THUMB_1.JPG
+		</Meta>
+		<Meta name="ESSENCE_CHANGED" format="string" frate="" />
+		<Meta name="BITRATE" format="string" frate="" />
+		<Meta name="DRATE" format="string" frate="" />
+		<Meta name="FTCIN" format="string" frate="" />
+		<Meta name="RESOLUTION" format="string" frate="" />
+		<Meta name="LASTDATEACCESSED" format="string" frate="" />
+		<Meta name="FSIZE" format="string" frate="" />
+		<Meta name="DURATION" format="string" frate="" />
+		<Meta name="USAGETYPE" format="string" frate="" />
+		<Meta name="USAGE" format="string" frate="">THUMB</Meta>
+		<Meta name="DWEB" format="string" frate="" />
+		<Meta name="USERSAVED" format="string" frate="" />
+		<Meta name="FTCOUT" format="string" frate="" />
+		<Meta name="ANUM" format="string" frate="" />
+		<Meta name="USECOUNT" format="string" frate="" />
+		<Meta name="LASTDATERESTORED" format="string" frate="" />
+		<Meta name="EMGUID" format="string" frate="" />
+		<Meta name="GRIDNUM" format="string" frate="" />
+		<Meta name="BACKUPTAPENUM" format="string" frate="" />
+		<Meta name="STANDARD" format="string" frate="" />
+		<Meta name="FILEUSAGE" format="string" frate="" />
+		<Meta name="HACSTATUS" format="string" frate="" />
+	</MVAttribute>
+	<MVAttribute type="FLAVOURINFORMATION" index="4"
+		attribute="FLAVOURINFORMATION" mdclass="VIDEO" objectid="V_110534NG_I0">
+		<Meta name="FTCINFRAME" format="string" frate="" />
+		<Meta name="GRIDPOSITION" format="string" frate="" />
+		<Meta name="FTCOUTFRAME" format="string" frate="" />
+		<Meta name="IMAGEID" format="string" frate="" />
+		<Meta name="VIDRES" format="string" frate="" />
+		<Meta name="LENGTH" format="string" frate="" />
+		<Meta name="CREATEDATE" format="string" frate="" />
+		<Meta name="LASTDATEREMOVED" format="string" frate="" />
+		<Meta name="FILELOCATION" format="string" frate="" />
+		<Meta name="WEBROOT" format="string" frate="" />
+		<Meta name="DIMAGE" format="string" frate="" />
+		<Meta name="ASPECTRATIO" format="string" frate="" />
+		<Meta name="FILEPATH" format="string" frate="">M:\HIGHRES\MEDIAARCHIVE\CARRIER\LOWRES\110534NG
+		</Meta>
+		<Meta name="FDATE" format="string" frate="" />
+		<Meta name="FORMAT" format="string" frate="">FSET</Meta>
+		<Meta name="FPS" format="string" frate="" />
+		<Meta name="FILENAME" format="string" frate="">110534NG_0_ZIP_1.ZIP
+		</Meta>
+		<Meta name="ESSENCE_CHANGED" format="string" frate="" />
+		<Meta name="BITRATE" format="string" frate="" />
+		<Meta name="DRATE" format="string" frate="" />
+		<Meta name="FTCIN" format="string" frate="" />
+		<Meta name="RESOLUTION" format="string" frate="" />
+		<Meta name="LASTDATEACCESSED" format="string" frate="" />
+		<Meta name="FSIZE" format="string" frate="" />
+		<Meta name="DURATION" format="string" frate="" />
+		<Meta name="USAGETYPE" format="string" frate="" />
+		<Meta name="USAGE" format="string" frate="">BROWSE</Meta>
+		<Meta name="DWEB" format="string" frate="" />
+		<Meta name="USERSAVED" format="string" frate="" />
+		<Meta name="FTCOUT" format="string" frate="" />
+		<Meta name="ANUM" format="string" frate="" />
+		<Meta name="USECOUNT" format="string" frate="" />
+		<Meta name="LASTDATERESTORED" format="string" frate="" />
+		<Meta name="EMGUID" format="string" frate="" />
+		<Meta name="GRIDNUM" format="string" frate="" />
+		<Meta name="BACKUPTAPENUM" format="string" frate="" />
+		<Meta name="STANDARD" format="string" frate="" />
+		<Meta name="FILEUSAGE" format="string" frate="" />
+		<Meta name="HACSTATUS" format="string" frate="" />
+	</MVAttribute>
+	<Link type="VIDEOSOURCE_VIDEO">
+		<Source dmname="">VS_110534NG</Source>
+		<Destination dmname="">V_110534NG_I0</Destination>
+	</Link>
+</AXFRoot>

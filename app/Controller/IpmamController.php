@@ -52,15 +52,20 @@ class IpmamController extends AppController {
             'CONTENT_TYPE',
             'START_TC',
             'END_TC',
-            'TAPE_RUNNING_TIME'
+            'TAPE_RUNNING_TIME',
         );
 
         // Get the AXF hitList from the ipmam model
         $hitlist = $this->Ipmam->getHitListDoc($itemsToRetrive);
 
+        echo "$queryDoc\n";
+        echo "$hitlist\n";
+        exit;
         // Execute the search
         $searchResponseXml = $this->Ipmam->search($queryDoc, $hitlist);
 
+        print_r($searchResponseXml);
+        exit;
         // Parse the hitList XML and build an array of DMGUIDS
         $data['DMGUIDS'] = $this->Ipmam->parseXml($searchResponseXml);
 
