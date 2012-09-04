@@ -476,7 +476,7 @@ exit; */
             $bcc{$dmguid['BARCODE']}['duration'] = $this->sumTrt($duration, $dmguid['TAPE_RUNNING_TIME']);
 
             list($emGuids, $dmFilesize) = $this->getFilelocationsWithSize($key);
-            continue;
+            //continue;
             $bcc{$dmguid['BARCODE']}['locations'] = $emGuids;
             $bcc{$dmguid['BARCODE']}['filesize'] = $dmFilesize;
 
