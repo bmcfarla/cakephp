@@ -1,0 +1,33 @@
+<AXFRoot>
+    <MAObject type='default' mdclass='DMQuery'>
+        <GUID>theID</GUID>
+        <Meta name='OBJECTCLASSES' format='string'>VIDEO</Meta>
+        <Meta name='SIMPLESEARCH' format='string'></Meta>
+        <Meta name='FIRSTHIT' format='string'>0</Meta>
+        <Meta name='MAXHITS' format='string'>10</Meta>
+        <Meta name='HITLISTID' format='string'>01 - Default</Meta>
+    </MAObject>    <MAObject type='default' mdclass='AttributeSearch'>
+        <GUID />
+        <Ref mdclass='DMQuery' name='QUERY'>theID</Ref>
+        <Meta name='ATTRIBUTE' format='string'>PRODUCTION_NUMBER</Meta>
+        <Meta name='SEARCHSTRING' format='string'>x65600</Meta>
+        <Meta name='GROUP' format='string'>1</Meta>
+    </MAObject>
+</AXFRoot>
+
+<AXFRoot>
+    <MAObject type='default' mdclass='DMQuery'>
+        <GUID>V_110534NG_I0</GUID>
+        <Meta name="REGISTRATION_DATE" format="string" frate=""></Meta>
+    </MAObject>
+    <MAObject type='default' mdclass='DMQuery'>
+        <GUID>V_110042NG_I0</GUID>
+        <Meta name="REGISTRATION_DATE" format="string" frate=""></Meta>
+    </MAObject>
+</AXFRoot>
+
+<AXFRoot><MAObject type='default' mdclass='DMQuery'><GUID>V_110534NG_I0</GUID></MAObject></AXFRoot>
+
+<AXFRoot><MAObject type='default' mdclass='DMQuery'><GUID>V_110534NG_I0</GUID><Meta name="REGISTRATION_DATE" format="string" frate=""></Meta></MAObject></AXFRoot>
+
+<AXFRoot><MAObject type='default' mdclass='DMQuery'><GUID>V_110534NG_I0</GUID><Meta name="REGISTRATION_DATE" format="string" frate=""></Meta></MAObject><MAObject type='default' mdclass='DMQuery'><GUID>V_110042NG_I0</GUID><Meta name="REGISTRATION_DATE" format="string" frate=""></Meta></MAObject></AXFRoot>

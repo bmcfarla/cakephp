@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<AXFRoot>
+	<MAObject type="default" mdclass="VIDEO">
+		<GUID dmname="">V_10N10681_I1</GUID>
+		<Meta name="TAPE_RUNNING_TIME" format="string" frate="">00:00:00:04
+		</Meta>
+		<Meta name="CONTENT_TYPE" format="string" frate="">16</Meta>
+		<Meta name="START_TC" format="string" frate="">00:00:00:00</Meta>
+		<Meta name="BARCODE" format="string" frate="">10N10681</Meta>
+		<Meta name="PRODUCTION_TITLE" format="string" frate="">SPEED KILLS
+		</Meta>
+		<Meta name="PRODUCTION_NUMBER" format="string" frate="">X65600
+		</Meta>
+		<Meta name="END_TC" format="string" frate="">00:00:00:04</Meta>
+		<Meta name="CLIP_ID" format="string" frate="">1</Meta>
+		<Meta name="ASSET_TAPE_FORMAT" format="string" frate="">382</Meta>
+	</MAObject>
+	<MVAttribute type="FLAVOURINFORMATION" index="0"
+		attribute="FLAVOURINFORMATION" mdclass="VIDEO" objectid="V_10N10681_I1">
+		<Meta name="FTCINFRAME" format="string" frate="">0</Meta>
+		<Meta name="GRIDPOSITION" format="string" frate="">7</Meta>
+		<Meta name="FTCOUTFRAME" format="string" frate="">5</Meta>
+		<Meta name="IMAGEID" format="string" frate="">1</Meta>
+		<Meta name="VIDRES" format="string" frate="">NON</Meta>
+		<Meta name="LENGTH" format="string" frate="">00:00:00:05</Meta>
+		<Meta name="CREATEDATE" format="string" frate="" />
+		<Meta name="LASTDATEREMOVED" format="string" frate="" />
+		<Meta name="FILELOCATION" format="string" frate="">0</Meta>
+		<Meta name="WEBROOT" format="string" frate="">http://vblogger.ngs.org/K/
+		</Meta>
+		<Meta name="DIMAGE" format="string" frate="">0</Meta>
+		<Meta name="ASPECTRATIO" format="string" frate="" />
+		<Meta name="FILEPATH" format="string" frate="">K:\10N10681\</Meta>
+		<Meta name="FDATE" format="string" frate="">20100816143510</Meta>
+		<Meta name="FORMAT" format="string" frate="">H264</Meta>
+		<Meta name="FPS" format="string" frate="" />
+		<Meta name="FILENAME" format="string" frate="">10N10681_1_47_1.MOV
+		</Meta>
+		<Meta name="ESSENCE_CHANGED" format="string" frate="">1</Meta>
+		<Meta name="BITRATE" format="string" frate="" />
+		<Meta name="DRATE" format="string" frate="">0</Meta>
+		<Meta name="FTCIN" format="string" frate="">00:00:00:00</Meta>
+		<Meta name="RESOLUTION" format="string" frate="" />
+		<Meta name="LASTDATEACCESSED" format="string" frate="">20100816143514
+		</Meta>
+		<Meta name="FSIZE" format="string" frate="" />
+		<Meta name="DURATION" format="string" frate="">00:00:00:05</Meta>
+		<Meta name="USAGETYPE" format="string" frate="" />
+		<Meta name="USAGE" format="string" frate="">ANY</Meta>
+		<Meta name="DWEB" format="string" frate="">0</Meta>
+		<Meta name="USERSAVED" format="string" frate="" />
+		<Meta name="FTCOUT" format="string" frate="">00:00:00:05</Meta>
+		<Meta name="ANUM" format="string" frate="" />
+		<Meta name="USECOUNT" format="string" frate="">0</Meta>
+		<Meta name="LASTDATERESTORED" format="string" frate="" />
+		<Meta name="EMGUID" format="string" frate="">b1c40fac-c0d0-4c11-987b-9e623554b69f
+		</Meta>
+		<Meta name="GRIDNUM" format="string" frate="">5</Meta>
+		<Meta name="BACKUPTAPENUM" format="string" frate="" />
+		<Meta name="STANDARD" format="string" frate="" />
+		<Meta name="FILEUSAGE" format="string" frate="" />
+		<Meta name="HACSTATUS" format="string" frate="" />
+	</MVAttribute>
+	<MVAttribute type="FLAVOURINFORMATION" index="1"
+		attribute="FLAVOURINFORMATION" mdclass="VIDEO" objectid="V_10N10681_I1">
+		<Meta name="FTCINFRAME" format="string" frate="">0</Meta>
+		<Meta name="GRIDPOSITION" format="string" frate="">6</Meta>
+		<Meta name="FTCOUTFRAME" format="string" frate="">4</Meta>
+		<Meta name="IMAGEID" format="string" frate="">1</Meta>
+		<Meta name="VIDRES" format="string" frate="" />
+		<Meta name="LENGTH" format="string" frate="">00:00:00:04</Meta>
+		<Meta name="CREATEDATE" format="string" frate="" />
+		<Meta name="LASTDATEREMOVED" format="string" frate="" />
+		<Meta name="FILELOCATION" format="string" frate="">0</Meta>
+		<Meta name="WEBROOT" format="string" frate="">http://vblogger.ngs.org/MSHOTS/
+		</Meta>
+		<Meta name="DIMAGE" format="string" frate="">0</Meta>
+		<Meta name="ASPECTRATIO" format="string" frate="" />
+		<Meta name="FILEPATH" format="string" frate="">M:\SHOTS\10N10681\
+		</Meta>
+		<Meta name="FDATE" format="string" frate="">20100816143512</Meta>
+		<Meta name="FORMAT" format="string" frate="">PROPROXY</Meta>
+		<Meta name="FPS" format="string" frate="" />
+		<Meta name="FILENAME" format="string" frate="">10N10681_1_46_1.MOV
+		</Meta>
+		<Meta name="ESSENCE_CHANGED" format="string" frate="">1</Meta>
+		<Meta name="BITRATE" format="string" frate="" />
+		<Meta name="DRATE" format="string" frate="">0</Meta>
+		<Meta name="FTCIN" format="string" frate="">00:00:00:00</Meta>
+		<Meta name="RESOLUTION" format="string" frate="" />
+		<Meta name="LASTDATEACCESSED" format="string" frate="">20100816143516
+		</Meta>
+		<Meta name="FSIZE" format="string" frate="" />
+		<Meta name="DURATION" format="string" frate="">00:00:00:04</Meta>
+		<Meta name="USAGETYPE" format="string" frate="" />
+		<Meta name="USAGE" format="string" frate="">ANY</Meta>
+		<Meta name="DWEB" format="string" frate="">0</Meta>
+		<Meta name="USERSAVED" format="string" frate="" />
+		<Meta name="FTCOUT" format="string" frate="">00:00:00:04</Meta>
+		<Meta name="ANUM" format="string" frate="" />
+		<Meta name="USECOUNT" format="string" frate="">0</Meta>
+		<Meta name="LASTDATERESTORED" format="string" frate="" />
+		<Meta name="EMGUID" format="string" frate="">c0887ee0-d9c3-4665-9df4-3188171a94f4
+		</Meta>
+		<Meta name="GRIDNUM" format="string" frate="">5</Meta>
+		<Meta name="BACKUPTAPENUM" format="string" frate="" />
+		<Meta name="STANDARD" format="string" frate="" />
+		<Meta name="FILEUSAGE" format="string" frate="" />
+		<Meta name="HACSTATUS" format="string" frate="" />
+	</MVAttribute>
+	<MVAttribute type="FLAVOURINFORMATION" index="2"
+		attribute="FLAVOURINFORMATION" mdclass="VIDEO" objectid="V_10N10681_I1">
+		<Meta name="FTCINFRAME" format="string" frate="" />
+		<Meta name="GRIDPOSITION" format="string" frate="" />
+		<Meta name="FTCOUTFRAME" format="string" frate="" />
+		<Meta name="IMAGEID" format="string" frate="">1</Meta>
+		<Meta name="VIDRES" format="string" frate="" />
+		<Meta name="LENGTH" format="string" frate="" />
+		<Meta name="CREATEDATE" format="string" frate="" />
+		<Meta name="LASTDATEREMOVED" format="string" frate="" />
+		<Meta name="FILELOCATION" format="string" frate="" />
+		<Meta name="WEBROOT" format="string" frate="" />
+		<Meta name="DIMAGE" format="string" frate="" />
+		<Meta name="ASPECTRATIO" format="string" frate="" />
+		<Meta name="FILEPATH" format="string" frate="">M:\SHOTS\10N10681\
+		</Meta>
+		<Meta name="FDATE" format="string" frate="" />
+		<Meta name="FORMAT" format="string" frate="">PRORES</Meta>
+		<Meta name="FPS" format="string" frate="" />
+		<Meta name="FILENAME" format="string" frate="">10N10681_1_44_1.mov
+		</Meta>
+		<Meta name="ESSENCE_CHANGED" format="string" frate="">1</Meta>
+		<Meta name="BITRATE" format="string" frate="" />
+		<Meta name="DRATE" format="string" frate="" />
+		<Meta name="FTCIN" format="string" frate="">00:00:00:00</Meta>
+		<Meta name="RESOLUTION" format="string" frate="" />
+		<Meta name="LASTDATEACCESSED" format="string" frate="" />
+		<Meta name="FSIZE" format="string" frate="" />
+		<Meta name="DURATION" format="string" frate="">00:00:00:05</Meta>
+		<Meta name="USAGETYPE" format="string" frate="" />
+		<Meta name="USAGE" format="string" frate="">EDIT</Meta>
+		<Meta name="DWEB" format="string" frate="" />
+		<Meta name="USERSAVED" format="string" frate="" />
+		<Meta name="FTCOUT" format="string" frate="">00:00:00:04</Meta>
+		<Meta name="ANUM" format="string" frate="" />
+		<Meta name="USECOUNT" format="string" frate="" />
+		<Meta name="LASTDATERESTORED" format="string" frate="" />
+		<Meta name="EMGUID" format="string" frate="" />
+		<Meta name="GRIDNUM" format="string" frate="" />
+		<Meta name="BACKUPTAPENUM" format="string" frate="" />
+		<Meta name="STANDARD" format="string" frate="" />
+		<Meta name="FILEUSAGE" format="string" frate="" />
+		<Meta name="HACSTATUS" format="string" frate="" />
+	</MVAttribute>
+	<MVAttribute type="FLAVOURINFORMATION" index="3"
+		attribute="FLAVOURINFORMATION" mdclass="VIDEO" objectid="V_10N10681_I1">
+		<Meta name="FTCINFRAME" format="string" frate="" />
+		<Meta name="GRIDPOSITION" format="string" frate="" />
+		<Meta name="FTCOUTFRAME" format="string" frate="" />
+		<Meta name="IMAGEID" format="string" frate="">1</Meta>
+		<Meta name="VIDRES" format="string" frate="" />
+		<Meta name="LENGTH" format="string" frate="" />
+		<Meta name="CREATEDATE" format="string" frate="" />
+		<Meta name="LASTDATEREMOVED" format="string" frate="" />
+		<Meta name="FILELOCATION" format="string" frate="" />
+		<Meta name="WEBROOT" format="string" frate="" />
+		<Meta name="DIMAGE" format="string" frate="" />
+		<Meta name="ASPECTRATIO" format="string" frate="" />
+		<Meta name="FILEPATH" format="string" frate="">M:\HIGHRES\MEDIAARCHIVE\CARRIER\LOWRES\10N10681\
+		</Meta>
+		<Meta name="FDATE" format="string" frate="" />
+		<Meta name="FORMAT" format="string" frate="">H264</Meta>
+		<Meta name="FPS" format="string" frate="" />
+		<Meta name="FILENAME" format="string" frate="">10N10681_1_47_1.MOV
+		</Meta>
+		<Meta name="ESSENCE_CHANGED" format="string" frate="">1</Meta>
+		<Meta name="BITRATE" format="string" frate="" />
+		<Meta name="DRATE" format="string" frate="" />
+		<Meta name="FTCIN" format="string" frate="">00:00:00:00</Meta>
+		<Meta name="RESOLUTION" format="string" frate="" />
+		<Meta name="LASTDATEACCESSED" format="string" frate="" />
+		<Meta name="FSIZE" format="string" frate="" />
+		<Meta name="DURATION" format="string" frate="">00:00:00:05</Meta>
+		<Meta name="USAGETYPE" format="string" frate="" />
+		<Meta name="USAGE" format="string" frate="">BROWSE</Meta>
+		<Meta name="DWEB" format="string" frate="" />
+		<Meta name="USERSAVED" format="string" frate="" />
+		<Meta name="FTCOUT" format="string" frate="">00:00:00:00</Meta>
+		<Meta name="ANUM" format="string" frate="" />
+		<Meta name="USECOUNT" format="string" frate="" />
+		<Meta name="LASTDATERESTORED" format="string" frate="" />
+		<Meta name="EMGUID" format="string" frate="" />
+		<Meta name="GRIDNUM" format="string" frate="" />
+		<Meta name="BACKUPTAPENUM" format="string" frate="" />
+		<Meta name="STANDARD" format="string" frate="" />
+		<Meta name="FILEUSAGE" format="string" frate="" />
+		<Meta name="HACSTATUS" format="string" frate="" />
+	</MVAttribute>
+</AXFRoot>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<AXFRoot>
+	<MAObject type="QueryResult" mdclass="QueryResult">
+		<GUID dmname=""></GUID>
+		<Meta name="NUMBEROFHITS" format="string" frate="">1078</Meta>
+		<Meta name="FIRSTHIT" format="string" frate="">0</Meta>
+	</MAObject>
+	<MAObject type="default" mdclass="VIDEO">
+		<GUID dmname="">V_10N10681_I1</GUID>
+		<Meta name="BARCODE" format="string" frate="">10N10681</Meta>
+		<Meta name="CLIP_ID" format="string" frate="">1</Meta>
+		<Meta name="PRODUCTION_NUMBER" format="string" frate="">X65600
+		</Meta>
+		<Meta name="PRODUCTION_TITLE" format="string" frate="">SPEED KILLS
+		</Meta>
+		<Meta name="ASSET_TAPE_FORMAT" format="string" frate="">Typhoon HD5
+		</Meta>
+		<Meta name="CONTENT_TYPE" format="string" frate="">Original Source
+		</Meta>
+		<Meta name="START_TC" format="string" frate="">00:00:00:00</Meta>
+		<Meta name="END_TC" format="string" frate="">00:00:00:04</Meta>
+		<Meta name="TAPE_RUNNING_TIME" format="string" frate="">00:00:00:04
+		</Meta>
+	</MAObject>
+</AXFRoot>
+

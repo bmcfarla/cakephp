@@ -391,6 +391,25 @@ exit; */
     /**
      *
      */
+    function getDmguidFromSearchResults($xmlIn) {
+        $prodTitle = '';
+        $guids = array();
+        //print $xmlIn;
+        //$xml = new SimpleXMLElement($xmlIn);
+        $xml = new SimpleXmlIterator($xmlIn);
+
+        $data = $xml->xpath('/AXFRoot/MAObject[@mdclass="VIDEO"]/GUID');
+
+        foreach ($data as $guid){
+            $guids[] = strval($guid);
+        }
+
+        return $guids;
+    }
+
+    /**
+     *
+     */
     function parseXml($xmlIn) {
         $prodTitle = '';
 
@@ -620,6 +639,72 @@ exit; */
         //exit;
 
         return array($emguids, $dmguidFilesize);
+    }
+
+    function getObjectAccessData($dmguids, $metaTags){
+
+        $axfDoc = $this->getAxfDoc($dmguids, $metaTags);
+        //echo $axfDoc;
+
+        $includeAttributes = 1;
+        $includeStrata = 0;
+        $includeAssociations = 0;
+        $includeEssencePackages = 1;
+
+        // Get input object
+        $inputObject = $this->_ipmam->f(
+            'GetDMObjectEx',
+            array (
+                $axfDoc,
+                $this->_ipmam->vars['accessKey'],
+                $includeAttributes,
+                $includeStrata,
+                $includeAssociations,
+                $includeEssencePackages
+            )
+        );
+
+        $response = $this->_ipmam->client('dmObjectAccess')->GetDMObjectEx($inputObject);
+        print_r($response);
+    }
+
+    function getAxfDoc($dmguids, $metas) {
+        $metaTagArray = array();
+        $maObjects = array();
+
+        foreach ($metas as $meta) {
+            $metaTagArray[] = $this->_getAxfDocMaObjectMeta($meta);
+        }
+
+        $metaTags = implode("\n",$metaTagArray);
+
+        foreach ($dmguids as $dmguid) {
+            $maObjects[] = $this->_getAxfDocMaObject($dmguid, $metaTags);
+        }
+
+        $axfDoc = "<AXFRoot>\n";
+        $axfDoc .= implode("\n",$maObjects);
+        $axfDoc .= "\n</AXFRoot>";
+
+        return $axfDoc;
+
+    }
+
+    /**
+     * return the attributeSearch Template
+     */
+    function _getAxfDocMaObject($dmguid, $metaTags) {
+        return "    <MAObject>
+        <GUID>$dmguid</GUID>
+        $metaTags
+    </MAObject>";
+    }
+
+    /**
+     * return the attributeSearch Template
+     */
+    function _getAxfDocMaObjectMeta($meta) {
+        return "<Meta name=\"$meta\"></Meta>";
     }
 }
 
